@@ -1,0 +1,21 @@
+.label {
+  color: #fff;
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 162.5%;
+}
+.input {
+  display: flex;
+  height: 60px;
+  padding: 15px 20px;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid rgba(1, 188, 228, 0.53);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 212, 254, 0.02) 0%,
+    rgba(64, 221, 218, 0.02) 100%
+  );
+}

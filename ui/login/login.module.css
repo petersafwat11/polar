@@ -1,0 +1,14 @@
+.login {
+  display: flex;
+  padding: 1.4rem 3rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  border: 3px solid #0b1113;
+  color: #01d1fd;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 155.556%;
+}

@@ -1,0 +1,95 @@
+.container {
+  width: 853px;
+  height: 656px;
+  background-color: linear-gradient(
+    180deg,
+    rgba(0, 212, 254, 0.05) 10.61%,
+    rgba(68, 105, 232, 0.02) 100%
+  );
+  border: 1px solid rgba(133, 191, 249, 0.3);
+  backdrop-filter: blur(32px);
+  padding: 4.5rem 2rem 7.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.amount {
+  color: #fff;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-top: 3.7rem;
+}
+.success-message {
+  color: #fff;
+  text-align: center;
+  font-size: 4.8rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-top: 0.6rem;
+}
+.message {
+  color: #fff;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 184.548%;
+  margin-top: 1.6rem;
+}
+.time {
+  color: #fff;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 105.456%;
+  margin-top: 3.4rem;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3.8rem;
+}
+.history {
+  color: #00d4fe;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 155%;
+  display: flex;
+  padding: 1.4rem 3rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  border: 3px solid #0b1113;
+}
+.done {
+  display: flex;
+  width: 10.4rem;
+  padding: 1.2rem 2.4rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 52px;
+  background: linear-gradient(
+    90deg,
+    #00d4fe 0%,
+    #01d1fd 26%,
+    #07c8fb 43%,
+    #10b9f8 57%,
+    #1da5f4 70%,
+    #2f8aef 81%,
+    #4469e8 92%,
+    #574ce3 100%
+  );
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 155%;
+}
