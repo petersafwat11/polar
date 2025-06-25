@@ -1,0 +1,118 @@
+.topBar {
+  background: url('/searchbarbackground.png') center/cover no-repeat, rgba(20, 30, 40, 0.4);
+  border-radius: 20px;
+  padding: 63px 295px 63px 259px;
+  margin: 101px auto 83px auto; 
+  max-width: 1224px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.heading {
+  color: #FFF;
+text-align: center;
+font-family: Sansation;
+font-size: 44px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: capitalize;
+}
+
+.desc {
+    margin: 21px 0px;
+  color: rgba(255, 255, 255, 0.60);
+text-align: center;
+font-feature-settings: 'salt' on;
+font-family: "Nunito Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 32px; /* 160% */;
+}
+
+.searchWrapper {
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  border-radius: 12px;
+border: 1px solid #00D4FE;
+background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(0, 0, 0, 0.15) 50.03%, rgba(1, 210, 253, 0.30) 100%), rgba(255, 255, 255, 0.10);display: flex;
+width: 473px;
+height: 55px;
+padding: 0px 20px;
+align-items: center;
+gap: 20px;
+}
+
+.searchInput::placeholder {
+color: #b4b2b28a;
+font-feature-settings: 'salt' on;
+font-family: Lato;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+.blue-ellipse-2 {
+  position: absolute;
+  top: 398px; 
+  bottom: 470px;
+  right: 1296px;
+  left:-130px;
+ border-radius: 274.344px;
+background: linear-gradient(90deg, #00D4FE 0%, #01D1FD 26%, #07C8FB 43%, #10B9F8 57%, #1DA5F4 70%, #2F8AEF 81%, #4469E8 92%, #574CE3 100%);
+filter: blur(201.9239959716797px);
+  z-index: -1;
+ width: 274.344px;
+height: 274.344px;
+flex-shrink: 0;
+}
+
+@media (max-width:950px) {
+.topBar 
+ {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+      padding:  66px 18px;
+  margin: 50px auto; 
+
+  }
+  
+.heading {
+font-size: 24px;
+line-height: 32px;
+text-transform: capitalize;
+}
+
+.searchInput {
+border: 1px solid #00D4FE;
+height: 55px;
+padding: 0px 20px;
+align-items: center;
+gap: 20px;
+}
+
+.searchInput::placeholder {
+color: #b4b2b28a;
+font-feature-settings: 'salt' on;
+font-family: Lato;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+@media (max-width:650px) {
+.blue-ellipse-2 {
+ width: 100.344px;
+}
+}
+}

@@ -1,0 +1,165 @@
+.container {
+width: 100%;
+
+flex-shrink: 0;
+ background: 
+  linear-gradient(0deg, rgba(11, 17, 19, 0.81) 0%, rgba(11, 17, 19, 0.81) 100%),
+  url('/Process.png') center / cover no-repeat lightgray;
+
+  padding: 100px 126px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top:  1px solid rgba(4, 177, 210, 0.24);
+  border-bottom:  1px solid rgba(4, 177, 210, 0.24);
+}
+
+.processTag {
+  margin-bottom: 25px;
+padding: 0px 21px;
+  min-width: 180px;
+  font-size: 20px !important;
+  height: 48px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+font-family: Lato;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 133.333% */
+}
+
+.heading {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 58px;
+font-family: Sansation;
+font-size: 44px;
+font-style: normal;
+line-height: normal;
+text-transform: capitalize;
+}
+
+.cards {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+align-items: stretch;
+  
+}
+
+.card {
+  width: 384px;
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  border-radius: 8px;
+  border: 1px solid rgba(0, 212, 254, 0.53);
+  background: linear-gradient(180deg, rgba(0, 212, 254, 0.02) 0%, rgba(64, 221, 218, 0.02) 100%);
+  backdrop-filter: blur(30px);
+  background: transparent;
+}
+
+.card:hover {
+  box-shadow: 0 4px 32px 0 rgba(1, 188, 228, 0.18);
+}
+
+.icon {
+
+}
+
+.title {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom:24px 0px;
+  text-align: center;
+}
+
+.desc {
+color: rgba(255, 255, 255, 0.60);
+text-align: center;
+font-family: "Nunito Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px; /* 150% */  color: #b0b8c1;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 17px;
+    background:
+  linear-gradient(0deg, rgba(11, 17, 19, 0.81) 0%, rgba(11, 17, 19, 0.81) 100%),
+  url('/Process.png') center / cover no-repeat;
+
+  }
+
+  .heading {
+font-size: 24px;
+font-weight: 700;
+line-height: 32px; /* 133.333% */
+text-transform: capitalize;
+margin: 24px 0px;
+}
+
+
+.cards {
+  gap: 16px;
+   position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 339px;
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  background: transparent;
+
+}
+
+
+.title {
+margin: 24px 0px;
+font-family: Sansation;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 30px; /* 150% */
+text-transform: capitalize;
+}
+
+.desc {
+color: rgba(255, 255, 255, 0.60);
+text-align: center;
+font-family: "Nunito Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px; /* 162.5% */
+}
+
+
+}

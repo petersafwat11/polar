@@ -1,0 +1,134 @@
+.workTogether {
+  padding: 100px 120px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 417.6px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: url('/work.png') center / contain no-repeat;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+}
+.contentOverlay {
+margin-top: 310px;
+transform:translateY(-50%);
+z-index: 2;
+padding: 20px 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+max-width: 530px;
+width:100%;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+margin-left: 90px;
+
+}
+
+.title {
+ width: 100%;
+display: flex;
+height: 50px;
+flex-direction: column;
+justify-content: center;
+align-self: stretch;
+flex-direction: column;
+justify-content: center;
+align-self: stretch;
+color: #010203;
+font-family: Sansation;
+font-size: 52px;
+font-style: normal;
+font-weight: 700;
+line-height: 72.736px;
+text-transform: capitalize;
+
+}
+.description {
+color: #010203;
+font-family: Lato;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px;
+text-transform: capitalize;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  padding: 4px 8px 4px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  max-width: 400px;
+border-radius: 100px;
+background: #FFF;
+width: 490px;
+height: 70px;
+flex-shrink: 0;
+}
+
+.input{
+border-radius: 100px;
+background: #FFF;
+flex-shrink: 0;
+flex: 1;
+border: none;
+outline: none;
+font-size: 1rem;
+padding: 12px 0;
+  background: transparent;
+  color: #010203;
+font-family: Sansation;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px; /* 200% */
+text-transform: capitalize;
+}
+
+.button {
+border-radius: 50px;
+background: linear-gradient(90deg, #00D4FE 0%, #01D1FD 26%, #07C8FB 43%, #10B9F8 57%, #1DA5F4 70%, #2F8AEF 81%, #4469E8 92%, #574CE3 100%);
+display: flex;
+width: 151px;
+height: 56px;
+padding: 16px 28px 16px 24px;
+justify-content: center;
+align-items: center;
+gap: 11px;
+color:white;
+font-family: Sansation;
+flex-shrink: 0;
+margin-left: 8px;
+transition: background 0.2s;
+}
+
+@media (max-width: 900px) {
+  .workTogether {
+    flex-direction: column;
+    padding: 0;
+    min-height: 0;
+    background-position: center;
+    height: auto;
+  }
+  .contentOverlay {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin: 24px 8px;
+    padding: 32px 12px;
+    max-width: 100%;
+  }
+  .right {
+    justify-content: center;
+    margin-top: 32px;
+  }
+  .left {
+    max-width: 100%;
+  }
+}

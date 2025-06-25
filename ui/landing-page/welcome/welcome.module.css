@@ -1,0 +1,123 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 90px 120px;
+
+}
+
+.imageContainer {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.content {
+  max-width: 55%;
+  padding-left: 2rem;
+  
+}
+
+.tag {
+  color: var(--primary);
+  font-weight: 600;
+  border: 1px solid var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.heading {
+ color: #FFF;
+font-family: Sansation !important;
+font-size: 44px;
+font-style: normal;
+font-weight: 700;
+line-height: 52px; /* 118.182% */
+text-transform: capitalize;
+margin-bottom:24px;
+}
+
+.text {
+ color: rgba(255, 255, 255, 0.60);
+font-family: "Nunito Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 32px; /* 160% */
+align-self: stretch;
+margin-bottom: 48px;
+
+
+
+}
+
+.button:hover {
+  
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.academyTag {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 16px;
+
+
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 24px 0px ;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .imageContainer {
+  width:100%;
+  display: flex;
+
+}
+  
+
+
+.content {
+  max-width: 100%;
+}
+
+.tag {
+  color: var(--primary);
+  font-weight: 600;
+  border: 1px solid var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.heading {
+text-align: center;
+font-size: 24px;
+font-style: normal;
+line-height: 32px; /* 118.182% */
+margin-bottom:24px;
+}
+
+.text {
+  text-align: left;
+font-size: 14px;
+align-self: stretch;
+align-self: stretch;
+line-height: 24px;
+margin-bottom: 24px;
+
+}
+}

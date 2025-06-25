@@ -1,0 +1,32 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: fit-content;
+  min-height: 56px;
+  padding: 14px 30px;
+
+  border-radius: 30px;
+  border: 3px solid transparent;
+  background: transparent;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-image: 
+    linear-gradient(#0B1113, #0B1113),
+    linear-gradient(to top, #01BCE4, #0B1113);
+
+  color: #01BCE4;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-image: 
+    linear-gradient(#01BCE4, #01BCE4),
+    linear-gradient(to right, #01BCE4, #0B1113);
+  color: #0B1113;
+}

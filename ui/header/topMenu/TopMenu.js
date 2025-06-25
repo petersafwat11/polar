@@ -38,11 +38,12 @@ const TopMenu = () => {
           <MdOutlineStarPurple500 className={classes["star"]} />
           <p className={classes["para"]}>Trustpilot</p>
           <div className={classes["five-stars"]}>
-            {[1, 2, 3, 4, 5].map((item, index) => (
-              <div key={index} className={classes["star-wrapper"]}>
-                <MdOutlineStarPurple500 className={classes["small-star"]} />
-              </div>
-            ))}
+            <Image
+              src="/svg/fivestar.svg"
+              alt="five stars"
+              width={77}
+              height={25}
+            />
           </div>
         </div>
         <div className={classes["phone"]}>

@@ -1,0 +1,13 @@
+[
+  { "title": "Forex Trading", "desc": "Master essential strategies and techniques for navigating the currency markets.", "icon": "/svg/forextrading.svg" },
+  { "title": "Share Market", "desc": "Explore the dynamics of the share market and learn effective trading strategies.", "icon": "/svg/sharemarket.svg" },
+  { "title": "Stock Market", "desc": "Dive into the world of stock trading and uncover opportunities in the equity market.", "icon": "/svg/stockmarket.svg" },
+  { "title": "Options Trading", "desc": "Discover the versatility of options trading and leverage advanced strategies.", "icon": "/svg/optionstrading.svg" },
+  { "title": "Crypto Trading", "desc": "Explore the exciting world of cryptocurrency trading and capitalize on digital assets.", "icon": "/svg/cryptotrading.svg" },
+  { "title": "Intraday Trading", "desc": "Learn to profit from short-term market movements with intraday trading techniques.", "icon": "/svg/intradaytrading.svg" },
+  { "title": "Price Action Trading", "desc": "Understand market behavior and make informed decisions using price action techniques.", "icon": "/svg/priceaction.svg" },
+  { "title": "Professional Stock Trading", "desc": "Elevate your skills with advanced strategies for professional stock trading.", "icon": "/svg/professionalstock.svg" },
+  { "title": "Future And Options Trading", "desc": "Gain insights into derivative trading for diversified investment opportunities.", "icon": "/svg/futureoption.svg" },
+  { "title": "Swing Trading", "desc": "Profit from medium-term market trends with swing trading techniques.", "icon": "/svg/swing.svg" },
+  { "title": "Bots", "desc": "Profit from medium-term market trends with swing trading techniques.", "icon": "/svg/bots.svg" }
+] 

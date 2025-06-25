@@ -1,0 +1,246 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   padding: 6px 120px; 
+    background-color: transparent;
+ 
+}
+
+.nav {
+    display: flex;
+    margin-left: 24;
+}
+
+.option {
+    color: #EFEFEF;
+text-align: center;
+font-family: Lato;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 26px;
+margin-left: 32px;
+}
+
+.option:hover {
+    color: var(--primary);
+}
+
+.responsiveRight {
+  display: none;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.phoneIcon {
+  color: #ffffff;
+  width: 22px;
+  height: 22px;
+}
+
+.phoneNum {
+  color: #EFEFEF;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+.menuBtn {
+  background: none;
+  border: none;
+  padding: 0 0 0 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.desktopBtn {
+  display: inline-block;
+}
+
+.mobileMenu {
+  display: none;
+  color: #fff;
+}
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  background: #0B1113;
+  border-bottom: 1px solid #01BCE4;
+  padding: 12px 0 8px 0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+ 
+}
+.mobileLoginBtn {
+  margin-top: 16px;
+  margin-left: 20px;
+  margin-right: 0;
+  font-size: 11px;
+  width: fit-content;
+  display: block;
+}
+
+.mobileOverlay {
+  display: none;
+}
+
+.mobileCloseBtn {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .container {
+    display: flex;
+    padding: 6px 18px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+  }
+  .nav {
+    display: none;
+  }
+  .desktopBtn {
+    display: none;
+  }
+  .responsiveRight {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo {
+    width: 90px !important;
+    height: 38px !important;
+    margin-right: auto;
+  }
+  .mobileMenu {
+    display: block;
+  }
+  .mobileNav .option {
+    margin: 10px 18px;
+    font-size: 18px;
+    text-align: left;
+  }
+  .mobileOverlay {
+    display: block;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    background: rgba(0,0,0,0.5);
+    z-index: 99;
+  }
+
+  .mobileMenu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 60px;
+    min-height: 300px;
+    background: #171717;
+    z-index: 150;
+    padding-top: 0;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+  .mobileNav {
+    margin-top: 0;
+  }
+}
+@media (max-width:1100px) {
+
+
+}
+
+@media (max-width:900px) {
+  .container {
+    display: flex;
+    padding: 6px 18px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+  }
+  .nav {
+    display: none;
+  }
+  .desktopBtn {
+    display: none !important;
+  }
+  .responsiveRight {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo {
+    width: 90px !important;
+    height: 38px !important;
+    margin-right: auto;
+  }
+  .mobileMenu {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 60px;
+    min-height: 300px;
+    background: #0B1113;
+    z-index: 150;
+    padding-top: 0;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+  .mobileNav {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .mobileNav .option {
+    margin: 6px 18px;
+    font-size: 14px;
+    text-align: left;
+  }
+  .mobileLoginBtn {
+    margin-top: 16px;
+    margin-left: 18px;
+    margin-right: 0;
+    font-size: 11px;
+    width: fit-content;
+    display: block;
+  }
+  .mobileOverlay {
+    display: block;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    background:#0B1113;
+    z-index: 99;
+  }
+  .mobileCloseBtn {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    z-index: 200;
+    padding: 0;
+    cursor: pointer;
+  }
+  .mobileCloseBtn svg line {
+    stroke: #fff;
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+}

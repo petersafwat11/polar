@@ -1,0 +1,254 @@
+.card {
+  border-radius: 24px;
+  position: relative;
+  max-width: 384px;
+  width: 100%;
+  padding: 12px 12px 24px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+
+  /* backgroundد*/
+ background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 100%);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(85x);
+
+  border: none;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 0.5px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.8),      
+    rgba(200, 200, 200, 0.3) 40%,  
+    rgba(255, 255, 255, 0) 100%    
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+
+.imageWrapper {
+ height: 207px;
+  width: 100%;
+  border-radius: 20px;
+border: 0.4px solid #FFF;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.tagsRow {
+  display: flex;
+  padding: 4.644px 22.781px 5.356px 24.219px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 45.725px;
+  background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(0, 0, 0, 0.15) 50.03%, rgba(1, 210, 253, 0.30) 100%), rgba(255, 255, 255, 0.10);
+  gap: 8px;
+
+  position: relative;
+  border: none; 
+}
+.tagsRow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 45.725px;
+  padding: 0.9px; 
+  background: linear-gradient(
+    to bottom,
+    #00D4FE,
+    rgba(0, 212, 254, 0.4) 50%,
+    rgba(0, 212, 254, 0.1) 90%,
+    rgba(0, 212, 254, 0) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+
+.tag {
+ color: #FFF;
+font-family: Lato;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 17.917px; /* 111.979% */
+  display: inline-block;
+}
+
+.title {
+  color: #FFF;
+font-family: Sansation;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 30px; /* 150% */
+text-transform: capitalize;
+width:60%;
+}
+
+.buttonsRow {
+  width: 100%;
+  display: flex;
+justify-content: space-between;
+align-items: flex-start;
+align-self: stretch;
+
+
+  display: flex;
+justify-content: space-between;
+align-items: flex-start;
+align-self: stretch;
+width: 100%;
+}
+
+.viewMoreBtn {
+  box-sizing: border-box;
+  padding: 12px 27px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  max-width: 258.626px;
+  line-height: 16px;
+  font-family: Lato;
+  font-weight: 500;
+  text-align: center;
+}
+
+.viewMoreBtn:hover {
+  background: #00D4FE;
+  color: #fff;
+}
+
+.quickBuyBtn {border-radius: 52.257px;
+background: linear-gradient(90deg, #00D4FE 0%, #01D1FD 26%, #07C8FB 43%, #10B9F8 57%, #1DA5F4 70%, #2F8AEF 81%, #4469E8 92%, #574CE3 100%);
+
+display: flex;
+max-width: 258.626px;
+padding: 12px 24px;
+align-items: center;
+  border: none;
+  border-radius: 24px;
+
+color: #FFF;
+text-align: center;
+font-family: Lato;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 100% */
+
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.quickBuyBtn:hover {
+  background: linear-gradient(90deg, #574CE3 0%, #00D4FE 100%);
+  color: #fff;
+} 
+
+@media (max-width: 750px) {
+  .card {
+max-width: 100%;
+padding: 16px;
+ display: flex;
+padding: 12px 12px 24px 12px;
+flex-direction: column;
+align-items: flex-start;
+gap: 18px;
+align-self: stretch;
+  }
+  .imageWrapper {
+   border-radius: 20px;
+height: 207px;
+
+  }
+
+  .tagsRow {
+    display: flex;
+padding: 5.811px 19.786px 5.189px 19.214px;
+justify-content: center;
+align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .title {
+  font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 30px;
+    width: 100%;
+  }
+
+  .buttonsRow {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .viewMoreBtn,
+  .quickBuyBtn {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
+}
+@media (min-width: 751px) and (max-width: 991px) {
+  .card {
+    max-width: 100%;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .imageWrapper {
+    height: 190px;
+  }
+
+  .title {
+    font-size: 19px;
+    line-height: 28px;
+    width: 80%;
+  }
+
+  .tagsRow {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .buttonsRow {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .viewMoreBtn,
+  .quickBuyBtn {
+    max-width: 100%;
+  }
+}
+
+
