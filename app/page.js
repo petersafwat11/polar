@@ -3,7 +3,6 @@ import BlogSection from "@/ui/landing-page/blogSection/BlogSection";
 import Stats from "@/ui/landing-page/stats/Stats";
 import Welcome from "@/ui/landing-page/welcome/Welcome";
 import Process from "@/ui/landing-page/process/Process";
-import TopBar from "@/ui/landing-page/courses/TopBar";
 import styles from "./page.module.css";
 import CoursesPage from "@/ui/landing-page/courses/CoursesPage";
 import OnForexCourseSection from "@/ui/onforexcourse/OnForexCourseSection";
@@ -19,8 +18,8 @@ export default function Home() {
       <Welcome />
       <Process />     
       <CoursesPage />
-      <Work />
       <OnForexCourseSection />
+      <Work />
       <BlogSection />
     </div>
   );

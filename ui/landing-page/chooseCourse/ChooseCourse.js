@@ -7,23 +7,26 @@ export default function ChooseCourse() {
 
   useEffect(() => {
     fetch('/dummy/chooseCourseData.json')
-      .then((res) => res.json())
-      .then((data) => setCourses(data));
+      .then(res => res.json())
+      .then(data => setCourses(data));
   }, []);
-
-  // Split the courses into two groups: first 8 and last 3
-  const firstEight = courses.slice(0, 8);
-  const lastThree = courses.slice(8);
 
   return (
     <section className={styles.chooseCourseSection}>
       <Tag>Best Trading Academy in the UK</Tag>
-      <h2 className={styles.heading}>Choose The Right Trading Course For Learning</h2>
+      <h2 className={styles.heading}>
+        Choose The Right Trading Course For Learning
+      </h2>
       <p className={styles.subheading}>
-        Glad you're here in our trading institute's course section! Check out our variety of best trading courses with Polar tailored to match your unique interests and aims. No matter if you're a novice looking to grasp the fundamentals or a seasoned trader in search of advanced techniques, we've got a course for you.
+        Glad you're here in our trading institute's course section! Check out
+        our variety of best trading courses with Polar tailored to match your
+        unique interests and aims. No matter if you're a novice looking to grasp
+        the fundamentals or a seasoned trader in search of advanced techniques,
+        we've got a course for you.
       </p>
+
       <div className={styles.coursesGrid}>
-        {firstEight.map((course, idx) => (
+        {courses.map((course, idx) => (
           <div className={styles.card} key={idx}>
             <div className={styles.iconWrapper}>
               <img src={course.icon} alt={course.title} />
@@ -32,20 +35,7 @@ export default function ChooseCourse() {
             <div className={styles.cardDesc}>{course.desc}</div>
           </div>
         ))}
-        {lastThree.length > 0 && (
-          <div className={styles.lastRow}>
-            {lastThree.map((course, idx) => (
-              <div className={styles.card} key={8 + idx}>
-                <div className={styles.iconWrapper}>
-                  <img src={course.icon} alt={course.title} />
-                </div>
-                <div className={styles.cardTitle}>{course.title}</div>
-                <div className={styles.cardDesc}>{course.desc}</div>
-              </div>
-            ))}
-          </div>
-        )}
       </div>
     </section>
   );
-} 
+}

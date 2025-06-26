@@ -1,7 +1,9 @@
+/* =============== Global styles =============== */
+
 .section {
   width: 100%;
-  margin-top:100px;
-  padding: 0px 120px;
+  margin-top: 100px;
+  padding: 0 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,28 +11,28 @@
 }
 
 .textBlock {
-color: rgba(255, 255, 255, 0.70) !important;
-font-family: Lato;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: 30px; /* 150% */
-text-transform: capitalize;
-width:73%;
+  color: rgba(255, 255, 255, 0.70) !important;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: capitalize;
+  width: 73%;
 }
 
 .subheading {
- color: rgba(255, 255, 255, 0.70) !important;
-font-family: Lato;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: 30px; /* 150% */
-text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.70) !important;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: capitalize;
 }
 
 .cardsRow {
-  margin:60px 0px;
+  margin: 60px 0;
   display: flex;
   gap: 24px;
   justify-content: center;
@@ -48,9 +50,7 @@ text-transform: capitalize;
 
 .arrow {
   background: none;
-  border: 1px solid  rgba(0, 212, 254, 0.53);
-
-gap: 24px;
+  border: 1px solid rgba(0, 212, 254, 0.53);
   cursor: pointer;
   transition: color 0.2s, border-color 0.2s, background 0.2s;
   user-select: none;
@@ -60,13 +60,13 @@ gap: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, rgba(0, 212, 254, 0.02) 0%, rgba(64, 221, 218, 0.02) 100%);;
+  background: linear-gradient(180deg, rgba(0, 212, 254, 0.02) 0%, rgba(64, 221, 218, 0.02) 100%);
 }
 
 .arrow img {
- width: 32px;
-height: 32px;
-margin: 14px;
+  width: 32px;
+  height: 32px;
+  margin: 14px;
 }
 
 .dotsRow {
@@ -76,6 +76,7 @@ margin: 14px;
   gap: 10px;
   margin-top: 12px;
 }
+
 .dot {
   width: 10px;
   height: 10px;
@@ -84,6 +85,7 @@ margin: 14px;
   cursor: pointer;
   transition: background 0.2s;
 }
+
 .activeDot {
   width: 12px;
   height: 12px;
@@ -112,16 +114,35 @@ margin: 14px;
   position: absolute;
   top: -80px;
   right: -120px;
- border-radius: 274.344px;
-background: linear-gradient(90deg, #00D4FE 0%, #01D1FD 26%, #07C8FB 43%, #10B9F8 57%, #1DA5F4 70%, #2F8AEF 81%, #4469E8 92%, #574CE3 100%);
-filter: blur(201.9239959716797px);width: 274.344px;
-height: 274.344px;
-flex-shrink: 0;
-} 
+  border-radius: 274.344px;
+  background: linear-gradient(90deg, #00D4FE 0%, #01D1FD 26%, #07C8FB 43%, #10B9F8 57%, #1DA5F4 70%, #2F8AEF 81%, #4469E8 92%, #574CE3 100%);
+  filter: blur(201.924px);
+  width: 274.344px;
+  height: 274.344px;
+  flex-shrink: 0;
+}
 
+
+.actionsRow {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 16px;
+  flex-wrap: nowrap;
+}
+
+.viewMoreBtn,
+.quickBuyBtn {
+  width: auto;
+  flex: none;
+  white-space: nowrap;
+}
+
+/* =============== Media queries =============== */
 
 @media (max-width: 900px) {
-     .cardsRow {
+  .cardsRow {
     gap: 16px;
     flex-direction: column;
     align-items: center;
@@ -143,47 +164,40 @@ flex-shrink: 0;
     display: none;
   }
 }
-/* 📱 Mobile (max-width: 750px) */
-@media (max-width: 750px) {
+
+@media (max-width: 650px) {
   .section {
     padding: 0 18px;
     margin-top: 40px;
   }
-
   .textBlock {
     width: 100%;
     text-align: start;
   }
-
   .subheading {
     color: rgba(255, 255, 255, 0.60);
     font-size: 16px;
     line-height: 26px;
     text-align: start;
   }
-
   .cardsRow {
     gap: 16px;
     flex-direction: column;
     align-items: center;
     margin: 40px 0;
   }
-
   .sliderContainer {
     flex-direction: column;
   }
-
   .topRow {
     flex-direction: column;
     gap: 16px;
     align-items: center;
     text-align: center;
   }
-
   .arrowsRow {
     display: none;
   }
-
   .blueEllipse {
     width: 180px;
     height: 180px;
@@ -193,50 +207,33 @@ flex-shrink: 0;
   }
 }
 
-/* 📲 Tablet (min-width: 751px and max-width: 1024px) */
 @media (min-width: 751px) and (max-width: 1024px) {
   .section {
     padding: 0 40px;
     margin-top: 80px;
   }
-
   .textBlock {
     font-size: 18px;
     line-height: 28px;
     width: 90%;
   }
-
   .subheading {
     font-size: 18px;
     line-height: 28px;
   }
-
   .cardsRow {
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
   }
-
   .topRow {
     flex-direction: column;
     align-items: center;
     gap: 16px;
     text-align: center;
   }
-
   .arrowsRow {
     justify-content: center;
     gap: 16px;
   }
-
-  .blueEllipse {
-    width: 220px;
-    height: 220px;
-    top: -70px;
-    right: -80px;
-    filter: blur(180px);
-  }
 }
-
-
-

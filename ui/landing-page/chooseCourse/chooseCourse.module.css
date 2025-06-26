@@ -1,59 +1,54 @@
 .chooseCourseSection {
   width: 100%;
   min-height: 100vh;
- border-top: 1px solid rgba(88, 179, 234, 0.28);
-background: linear-gradient(0deg, #0b111340 0%, rgba(11, 17, 19, 0.01) 100%), 
-            url("/choosecourse.png") center center / cover no-repeat;
-
-
-  padding: 100px 0 40px 0;
+  border-top: 1px solid rgba(88, 179, 234, 0.28);
+  background: linear-gradient(0deg, #0b111340 0%, rgba(11, 17, 19, 0.01) 100%),
+    url("/choosecourse.png") center center / cover no-repeat;
+  padding: 100px 120px 0px 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .heading {
-color: #FFF;
-text-align: center;
-font-family: Sansation;
-font-size: 44px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-text-transform: capitalize;
-margin: 21px 0px;
-padding: 0px 162px;
+  color: #fff;
+  text-align: center;
+  font-family: Sansation;
+  font-size: 44px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin: 21px 0;
+  padding: 0 162px;
 }
-
 .subheading {
- color: rgba(255, 255, 255, 0.60);
-text-align: center;
-font-family: "Nunito Sans";
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-margin-bottom: 60px;
-padding: 0px 162px;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 60px;
+  padding: 0 162px;
 }
 
 .coursesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
- gap:24px;
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;     
   max-width: 1200px;
+  margin: 0 auto;
 }
+
 .card {
-  width: 282px;
-  height: 298px;
+  flex: 0 0 282px;             
+max-height: 298px;
   border-radius: 24px;
   position: relative;
-  overflow: hidden; 
- background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
-  backdrop-filter: 
-  blur(3px);
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(9px);
-  padding: 32px 20px 24px 20px;
+  padding: 32px 20px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,43 +60,42 @@ padding: 0px 162px;
   position: absolute;
   inset: 0;
   border-radius: 24px;
-  padding: 1.1px; 
+  padding: 1.1px;
   background: linear-gradient(to bottom, rgba(199, 193, 193, 0.7), rgba(255, 255, 255, 0));
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-  mask-composite: exclude;
+          mask-composite: exclude;
   pointer-events: none;
 }
 
 .card:hover {
   border-color: #00d4fe;
-  box-shadow: 0 8px 32px 0 rgba(1, 188, 228, 0.18);
+  box-shadow: 0 8px 32px rgba(1, 188, 228, 0.18);
 }
+
 .iconWrapper {
   width: 74px;
   height: 74px;
-  flex-shrink: 0;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 18px;
-  background: rgba(87, 76, 227, 0.07) !important;
+  background: rgba(87, 76, 227, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.12);
-
   overflow: hidden;
 }
+
 .iconWrapper img {
-  width: 48px;
-  height: 48px;
+width: 40px;
+height: 40px;
+flex-shrink: 0;
   object-fit: contain;
 }
 
 .cardTitle {
   color: #fff;
-  font-family: Sansation, Arial, sans-serif;
+  font-family: Sansation;
   font-size: 20px;
   font-weight: 700;
   text-align: center;
@@ -109,67 +103,82 @@ padding: 0px 162px;
 }
 
 .cardDesc {
-  color: rgba(255,255,255,0.7);
-  font-family: Lato, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Nunito Sans";
   font-size: 16px;
   text-align: center;
+  padding-right: 4.5px;
+  padding-left: 16px;
 }
 
-.lastRow {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  grid-column: 1 / -1;
-  margin-top: 32px;
-}
-
-.lastRow .card {
-  flex: 0 0 282px;
-  max-width: 100%;
-}
-
-@media (max-width: 900px) {
+@media (max-width: 650px) {
   .chooseCourseSection {
-    padding: 32px 0 24px 0;
+    padding: 40px 18.5px;
+  }
+  .heading {
+font-size: 24px;
+line-height: 32px; 
+    padding: 0 23.5px;
+  }
+  .subheading {
+   color: rgba(255, 255, 255, 0.60);
+font-size: 16px;
+font-weight: 400;
+line-height: 26px; 
+padding: 0px 10px;
+  }
+  .coursesGrid {
+    gap: 24px;
+    padding:0px 18px ;
+  }
+  .card {
+    flex: 0 0 100%;
+    height: 298px;
+  }
+
+.iconWrapper{
+  gap: 27px;
+}
+
+.cardTitle {
+ display: flex;
+flex-direction: column;
+gap: 15px;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 30px; /* 125% */
+text-transform: capitalize;
+}
+
+.cardDesc {
+  color: rgba(255, 255, 255, 0.60);
+text-align: center;
+font-family: "Nunito Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+
+
+}
+
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .chooseCourseSection {
+    padding: 48px 0 32px;
   }
   .heading {
     font-size: 28px;
+    padding: 0 40px;
   }
   .subheading {
     font-size: 16px;
     margin-bottom: 24px;
+    padding: 0 40px;
   }
   .coursesGrid {
-    gap: 20px 12px;
-  }
-  .lastRow {
-    gap: 12px;
-    margin-top: 20px;
+    gap: 20px;
   }
 }
-
-@media (max-width: 600px) {
-  .chooseCourseSection {
-    padding: 18px 0 12px 0;
-  }
-  .heading {
-    font-size: 20px;
-  }
-  .subheading {
-    font-size: 14px;
-    margin-bottom: 16px;
-  }
-  .coursesGrid {
-    grid-template-columns: 1fr;
-    gap: 16px 0;
-  }
-  .card {
-    padding: 18px 10px 14px 10px;
-  }
-  .lastRow {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    margin-top: 12px;
-  }
-} 

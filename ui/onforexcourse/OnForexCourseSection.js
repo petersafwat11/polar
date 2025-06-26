@@ -1,78 +1,86 @@
 "use client";
 import { useEffect, useState } from "react";
-import CourseCard from './courseCard/CourseCard';
-import styles from './onforexcourseSection.module.css';
+import CourseCard from "./courseCard/CourseCard";
+import styles from "./onforexcourseSection.module.css";
 
 export default function OnForexCourseSection() {
   const [courses, setCourses] = useState([]);
-  const [current, setCurrent] = useState(0); // index of first visible card
-  const [isMobile, setIsMobile] = useState(false);
-
+  const [current, setCurrent] = useState(0);
+  const [cardsPerView, setCardsPerView] = useState(1);   
+  const calcCards = w => (w <= 1024 ? 1 : 3);            
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 900);
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    const resize = () => setCardsPerView(calcCards(window.innerWidth));
+    resize();                               
+    window.addEventListener("resize", resize);
+    return () => window.removeEventListener("resize", resize);
   }, []);
 
-  const cardsPerView = isMobile ? 1 : 3;
 
   useEffect(() => {
-    fetch('/dummy/forexCourses.json')
-      .then(res => res.json())
-      .then(data => setCourses(data));
+    fetch("/dummy/forexCourses.json")
+      .then(r => r.json())
+      .then(setCourses);
   }, []);
 
-  const totalSlides = Math.ceil(courses.length / cardsPerView);
+  
+  const totalSlides  = Math.ceil(courses.length / cardsPerView);
   const currentSlide = Math.floor(current / cardsPerView);
 
-  const goToSlide = (slideIdx) => {
-    setCurrent(slideIdx * cardsPerView);
-  };
-
-  const prev = () => {
-    setCurrent((prev) => Math.max(prev - cardsPerView, 0));
-  };
-  const next = () => {
-    setCurrent((prev) => Math.min(prev + cardsPerView, (totalSlides - 1) * cardsPerView));
-  };
+  const goToSlide = i => setCurrent(i * cardsPerView);
+  const prev      = () => setCurrent(p => Math.max(p - cardsPerView, 0));
+  const next      = () => setCurrent(p => Math.min(p + cardsPerView,
+                                  (totalSlides - 1) * cardsPerView));
 
   return (
     <section className={styles.section}>
-      <span className={styles.blueEllipse}></span>
+      <span className={styles.blueEllipse} />
+
       <div className={styles.topRow}>
         <div className={styles.textBlock}>
           <p className={styles.subheading}>
-            No Matter Your Level Of Expertise Or Interest, Our Courses Provide Valuable Insights And Practical Knowledge To Help You Succeed In The Financial Markets. Enroll Now And Take The Next Step In Your Trading Journey!
+            No matter your level of expertise or interest, our courses provide
+            valuable insights and practical knowledge to help you succeed in the
+            financial markets. Enroll now and take the next step in your trading
+            journey!
           </p>
         </div>
-        {!isMobile && (
+
+    
+        {cardsPerView > 1 && (
           <div className={styles.arrowsRow}>
             <button className={styles.arrow} onClick={prev} disabled={current === 0}>
               <img src="/svg/leftarrow.svg" alt="Previous" />
             </button>
-            <button className={styles.arrow} onClick={next} disabled={current + cardsPerView >= courses.length}>
+            <button
+              className={styles.arrow}
+              onClick={next}
+              disabled={current + cardsPerView >= courses.length}
+            >
               <img src="/svg/righarrow.svg" alt="Next" />
             </button>
           </div>
         )}
       </div>
+
+      {/* ---------- Cards---------- */}
       <div className={styles.sliderContainer}>
         <div className={styles.cardsRow}>
-          {courses.slice(current, current + cardsPerView).map((course, idx) => (
-            <CourseCard
-              key={current + idx}
-              image={course.image}
-              tags={course.tags}
-              title={course.title}
-              onViewMore={() => {}}
-              onQuickBuy={() => {}}
-            />
-          ))}
+          {courses
+            .slice(current, current + cardsPerView)
+            .map((course, idx) => (
+              <CourseCard
+                key={course.id ?? current + idx}
+                image={course.image}
+                tags={course.tags}
+                title={course.title}
+                onViewMore={() => {}}
+                onQuickBuy={() => {}}
+              />
+            ))}
         </div>
       </div>
+
+      {/* -------- Dots ---------- */}
       <div className={styles.dotsRow}>
         {Array.from({ length: totalSlides }).map((_, idx) => (
           <span
@@ -84,4 +92,4 @@ export default function OnForexCourseSection() {
       </div>
     </section>
   );
-} 
+}

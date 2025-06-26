@@ -7,6 +7,7 @@
   justify-content: flex-start;
   overflow: hidden;
 }
+
 .backgroundTop {
 width: 100%;
 height: 657.321px;
@@ -31,7 +32,7 @@ width: 100%;  min-height: 410px;
 }
 .container {
   position: absolute;
-  top: 140px;
+  top: 120px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
@@ -40,8 +41,17 @@ width: 100%;  min-height: 410px;
   text-align: center;
   color: #fff;
 }
+   .exploreTag {
+    display: inline-block;
+    max-width: 260px;
+    margin-inline: auto;
+    text-align: center;
+    margin-bottom: 16px;
+    gap: 6px;
 
 
+
+  }
 .title {
   padding: 0px 333.5px;
 color: #FFF;
@@ -239,6 +249,7 @@ flex-shrink: 0;
 .arrowImg {
 width: 32px;
 height: 32px;
+flex-shrink: 0;
   display: block;
   object-fit: contain;
 
@@ -254,49 +265,152 @@ height: 32px;
   background: #00d4ff;
 }
 
-@media (max-width: 1100px) {
-  .cardsViewport {
-    width: calc(300px * 3 + 18px * 2);
+@media (max-width: 1220px) {
+  .container {
+    padding: 0 32px;
+    top: 60px;
   }
-  .card {
-    flex-basis: 300px;
-    max-width: 300px;
+
+  .title {
+    font-size: 36px;
+    padding: 0 64px;
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 28px;
+    padding: 0 32px;
+    margin-bottom: 48px;
+  }
+
+  .exploreTag {
+    display: inline-block;
+    margin: 0 auto 12px auto;
+    text-align: center;
+    max-width: 320px;
+  }
+
+.card {
+    width: 100%;
+    max-width: 280px;
+    flex: 0 0 auto;
   }
   .cardsWrapper {
-    gap: 18px;
+    justify-content: center;
+    gap: 20px;
   }
-}
-@media (max-width: 900px) {
+
   .sliderWrapper {
-    max-width: 100vw;
+    padding: 0 16px;
   }
-  .cardsViewport {
-    width: 90vw;
-    min-width: 0;
+   .backgroundBottom {
+    min-height: 200px;}
+}
+
+
+@media (max-width: 1020px) {
+  .container {
+    padding: 0 24px;
   }
-  .card {
-    flex-basis: 90vw;
-    max-width: 350px;
+
+  .title {
+    font-size: 32px;
+    padding: 0 24px;
+    margin-bottom: 16px;
   }
+
+  .description {
+    font-size: 17px;
+    line-height: 26px;
+    padding: 0 20px;
+    margin-bottom: 32px;
+  }
+
+  .exploreTag {
+    max-width: 280px;
+    margin: 0 auto 12px auto;
+  }
+
+  .sliderWrapper {
+    padding: 0 12px;
+  }
+
   .cardsWrapper {
-    gap: 18px;
+    justify-content: center;
+    gap: 16px;
   }
+
+  .card {
+    width: 280px;
+    flex: 0 0 280px;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    top: 40px;
+    padding: 0 16px;
+  }
+
+  .title {
+    font-size: 24px;
+    padding: 0 16px;
+    margin-bottom: 16px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 17px;
+    margin-bottom: 24px;
+  }
+
+  .exploreTag {
+    display: inline-block;
+    max-width: 260px;
+    margin-inline: auto;
+    padding: 0 16px;
+    text-align: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 360px;
+    flex: 0 0 auto;
+    margin: 0 auto;
+  }
+
+  .cardsWrapper {
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .sliderWrapper {
+    padding: 0 12px;
+  }
+
   .arrow {
-    font-size: 1.5rem;
-    padding: 8px 0;
+    display: none;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
   }
 }
 
-.exploreTag {
-  width: 270px;
-  max-width: 100%;
-  margin: 0 auto 18px auto;
-  display: flex;
-  justify-content: center;
-}
+/* Add blue ellipse at the bottom */
+.blueEllipseEffect {
+  position: absolute;
+  left:0;
+  top: 980;
+ border-radius: 274.344px;
+background: linear-gradient(90deg, #00D4FE 0%, #01D1FD 26%, #07C8FB 43%, #10B9F8 57%, #1DA5F4 70%, #2F8AEF 81%, #4469E8 92%, #574CE3 100%);
+filter: blur(201.9239959716797px);
+width: 190.344px;
+height: 274.344px;
 
-.sliderWrapper, .cardsViewport, .cardsWrapper, .card {
-  position: relative;
   z-index: 2;
+  pointer-events: none;
 }
-

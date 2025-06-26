@@ -142,18 +142,9 @@ text-transform: capitalize;
   height: 274.344px;
   flex-shrink: 0;
   border-radius: 274.344px;
-  background: linear-gradient(
-    90deg,
-    #00d4fe 0%,
-    #01d1fd 26%,
-    #07c8fb 43%,
-    #10b9f8 57%,
-    #1da5f4 70%,
-    #2f8aef 81%,
-    #4469e8 92%,
-    #574ce3 100%
-  );
-  filter: blur(201.924px);
+border-radius: 274.344px;
+background: linear-gradient(90deg, #00D4FE 0%, #01D1FD 26%, #07C8FB 43%, #10B9F8 57%, #1DA5F4 70%, #2F8AEF 81%, #4469E8 92%, #574CE3 100%);
+filter: blur(201.9239959716797px);
   z-index: 2;
   pointer-events: none;
 }
