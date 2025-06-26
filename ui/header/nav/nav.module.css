@@ -4,14 +4,12 @@
     align-items: center;
    padding: 6px 120px; 
     background-color: transparent;
- 
 }
 
 .nav {
     display: flex;
     margin-left: 24;
 }
-
 .option {
     color: #EFEFEF;
 text-align: center;

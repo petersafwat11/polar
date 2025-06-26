@@ -81,8 +81,8 @@ const Navbar = () => {
               <Link href={"/"} className={classes["option"]} onClick={() => setMenuOpen(false)}>
                 CONTACT US
               </Link>
-              <Button className={classes["mobileLoginBtn"]}>Login/Members</Button>
             </nav>
+               <Button className={classes["mobileLoginBtn"]}>Login/Members</Button>
           </div>
         </>
       )}

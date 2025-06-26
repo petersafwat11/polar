@@ -2,8 +2,7 @@
   width: 100%;
   min-height: 100vh;
   border-top: 1px solid rgba(88, 179, 234, 0.28);
-  background: linear-gradient(0deg, #0b111340 0%, rgba(11, 17, 19, 0.01) 100%),
-    url("/choosecourse.png") center center / cover no-repeat;
+  background: #0B1113 url("/choosecourse.png") center center / cover no-repeat;
   padding: 100px 120px 0px 120px;
   display: flex;
   flex-direction: column;

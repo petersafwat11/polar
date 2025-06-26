@@ -1,20 +1,21 @@
 .container {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
   background: linear-gradient(180deg, rgba(0, 212, 254, 0.05) 10.61%, rgba(68, 105, 232, 0.02) 100%);
   padding: 40px 0;
+width: calc(100% - 240px); 
   margin: 0 auto;
-  max-width: 1200px;
-  width: 100%;
   border-radius: 16px;
   border: 1px solid rgba(133, 191, 249, 0.30);
   backdrop-filter: blur(8px);
   margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
+
 .stat {
-  flex: 1 1 250px;
+  flex: 1 1 ;
   text-align: center;
   display: flex;
   flex-direction: column;

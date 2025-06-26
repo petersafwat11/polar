@@ -11,7 +11,8 @@ import Work from "@/ui/landing-page/worktogather/Work";
 export default function Home() {
   return (
     <div className={styles.page}>
-       <span className={styles["blue-ellipse-1"]}></span>
+      <span className={styles["blue-ellipse-3"]}></span>
+      <span className={styles["blue-ellipse-1"]}></span>
       <span className={styles["blue-ellipse-2"]}></span>
       <Hero />
       <Stats />

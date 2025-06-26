@@ -4,37 +4,54 @@
   position: relative;
 }
 
+.blue-ellipse {
+  position: absolute;
+  width: 274.344px;
+  height: 274.344px;
+  flex-shrink: 0;
+  z-index: 0;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    #00D4FE 0%,
+    #01D1FD 26%,
+    #07C8FB 43%,
+    #10B9F8 57%,
+    #1DA5F4 70%,
+    #2F8AEF 81%,
+    #4469E8 92%,
+    #574CE3 100%
+  );
+  filter: blur(201.924px);
+  pointer-events: none;
+}
+
 
 .blue-ellipse-1 {
-  position: absolute;
   top: 829px;
   left: -155px;
-  bottom: 6659px;
   right: 1321px;
-  
-width: 274.344px;
-height: 274.344px;
-flex-shrink: 0;
-  z-index: 0;
-  border-radius: 274.344px;
-background: linear-gradient(90deg, #00D4FE 0%, #01D1FD 26%, #07C8FB 43%, #10B9F8 57%, #1DA5F4 70%, #2F8AEF 81%, #4469E8 92%, #574CE3 100%);
-
-filter: blur(201.9239959716797px)
+  bottom: 6659px;
 }
 
 .blue-ellipse-2 {
- position: absolute;
   top: 1421px;
   left: 1382px;
-  bottom: 6067px;
   right: -136px;
-  
-width: 274.344px;
-height: 274.344px;
-flex-shrink: 0;
-  z-index: 0;
-  border-radius: 274.344px;
-background: linear-gradient(90deg, #00D4FE 0%, #01D1FD 26%, #07C8FB 43%, #10B9F8 57%, #1DA5F4 70%, #2F8AEF 81%, #4469E8 92%, #574CE3 100%);
+  bottom: 6067px;
+}
 
-filter: blur(201.9239959716797px)
+.blue-ellipse-3 {
+  top: 2711px;
+  left: -130px;
+  right: 1296px;
+  bottom: 4777px;
+}
+
+.blue-ellipse-4 {
+  top: 4650px;
+  left: 1274px;
+  right: -108px;
+  bottom: 2240px;
+  z-index: 1;
 }
