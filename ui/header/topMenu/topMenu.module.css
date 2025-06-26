@@ -113,7 +113,7 @@ font-weight: 400;
 line-height: normal;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1050px) {
  .container {
  display: flex;
 height: 36px;

@@ -37,7 +37,6 @@
   line-height: 82px;
   text-transform: capitalize;
   text-align: center;
-  
 }
 
 .label {
@@ -49,9 +48,40 @@
   text-transform: capitalize;
   text-align: center;
 }
+@media (max-width: 1150px) {
+  .stat {
+  flex: 1 1 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  position: relative;
+}
 
+.value {
+  color: #01BCE4;
+  font-family: "Nunito Sans"!important;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 82px;
+  text-transform: capitalize;
+  text-align: center;
+}
 
-@media (max-width: 950px) {
+.label {
+  color: #FFF;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+}
+@media (max-width: 900px) {
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -61,38 +91,18 @@
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    border: none;
-    border-radius: 0;
+    border-top: 1px solid rgba(1, 209, 253, 0.32);
+    border-bottom: 1px solid rgba(1, 209, 253, 0.32);
     background: none;
     backdrop-filter: none;
+    border-radius: 0px;
   }
 
-
-
   .stat {
-  position: relative;
-}
-
-.stat.right-line::after {
-  content: "";
-  position: absolute;
-  top: 20px;
-  bottom: 20px;
-  right: 0;
-  width: 1px;
-  background-color: rgba(1, 209, 253, 0.32);
-}
-
-.stat.bottom-line::before {
-  content: "";
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 0;
-  height: 1px;
-  background-color: rgba(1, 209, 253, 0.32);
-}
-
+    padding: 24px 12px;
+    position: relative;
+    border: none;
+  }
 
   .stat:nth-child(1),
   .stat:nth-child(3) {
@@ -104,9 +114,9 @@
     border-bottom: 1px solid rgba(1, 209, 253, 0.32);
   }
 
-  .stat:nth-child(2),
+  .stat:nth-child(3),
   .stat:nth-child(4) {
-    border-right: none;
+    border-top: 1px solid rgba(1, 209, 253, 0.32);
   }
 
   .value,
@@ -115,14 +125,14 @@
   }
 
   .value {
- font-size: 32px;
-font-weight: 700;
-line-height: 42px
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 42px;
   }
 
   .label {
-font-family: Lato;
-font-size: 14px;
-line-height: 24px; /* 171.429% */
+    font-family: Lato;
+    font-size: 14px;
+    line-height: 24px;
   }
 }

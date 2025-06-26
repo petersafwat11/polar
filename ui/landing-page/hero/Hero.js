@@ -15,20 +15,21 @@ const Hero = () => {
           </h1>
           <Button>Join Membership</Button>
         </div>
+
         <div className={classes.imageContainer}>
-          <img
-            src="/svg/laptop.svg"
-            alt="Hero Image"
-            width={559}
-            height={486}
-            className={classes.image}
-          />
+          <picture>
+            <source media="(max-width: 850px)" srcSet="/heromobile.png" />
+            <img
+              src="/svg/laptop.svg"
+              alt="Hero Image"
+              className={classes.image}
+            />
+          </picture>
+
           <button className={classes.viewCoursesBtn}>
             <img
               src="/svg/viewcourses.svg"
               alt="View Courses"
-              width={146}
-              height={146}
               className={classes.viewCoursesImg}
             />
           </button>
@@ -38,4 +39,4 @@ const Hero = () => {
   );
 };
 
-export default Hero; 
+export default Hero;
