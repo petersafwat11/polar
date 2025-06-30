@@ -1,12 +1,27 @@
 "use client";
-import styles from './courseCard.module.css';
-import Button from '../../common/button/Button';
+import styles from "./courseCard.module.css";
+import Button from "../../common/button/Button";
 
-export default function CourseCard({ image, tags = [], title, badge, onViewMore, onQuickBuy }) {
+export default function CourseCard({
+  image,
+  tags = [],
+  title,
+  badge,
+  onViewMore,
+  onQuickBuy,
+  className,
+  imageWrapperClass,
+  titleClass,
+  content,
+  contentClass,
+  buttonsRowClass,
+  viewMoreBtnClass,
+  quickBuyBtnClass,
+}) {
   return (
-    <div className={styles.card}>
+    <div className={className || styles.card}>
       {badge && <div className={styles.badge}>{badge}</div>}
-      <div className={styles.imageWrapper}>
+      <div className={imageWrapperClass || styles.imageWrapper}>
         <img src={image} alt={title} className={styles.image} />
       </div>
       <div className={styles.tagsRow}>
@@ -14,11 +29,12 @@ export default function CourseCard({ image, tags = [], title, badge, onViewMore,
           <span className={styles.tag} key={idx}>{tag}</span>
         ))}
       </div>
-      <div className={styles.title}>{title}</div>
-      <div className={styles.buttonsRow}>
-        <Button className={styles.viewMoreBtn} onClick={onViewMore}>View More</Button>
-        <button className={styles.quickBuyBtn} onClick={onQuickBuy}>Quick Buy</button>
+      <div className={titleClass || styles.title}>{title}</div>
+      {content && <div className={contentClass}>{content}</div>}
+      <div className={buttonsRowClass || styles.buttonsRow}>
+        <Button className={viewMoreBtnClass || styles.viewMoreBtn} onClick={onViewMore}>View More</Button>
+        <button className={quickBuyBtnClass || styles.quickBuyBtn} onClick={onQuickBuy}>Quick Buy</button>
       </div>
     </div>
   );
-} 
+}

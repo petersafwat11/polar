@@ -55,3 +55,169 @@
   bottom: 2240px;
   z-index: 1;
 }
+
+.forexPageBg {
+  min-height: 100vh;
+  width: 100%;
+  background: #0B1113;
+  padding: 0 0 60px 0;
+  position: relative;
+}
+
+.topBanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.bannerBtn {
+  background: linear-gradient(90deg, #00D4FE 0%, #01D1FD 26%, #07C8FB 43%, #10B9F8 57%, #1DA5F4 70%, #2F8AEF 81%, #4469E8 92%, #574CE3 100%);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 10px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(1, 188, 228, 0.12);
+  cursor: pointer;
+}
+
+.heading {
+  color: #fff;
+  text-align: center;
+  font-family: Sansation, sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  margin: 0 auto 12px auto;
+}
+
+.subheading {
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 32px auto;
+  font-family: Lato, sans-serif;
+}
+
+.contentRow {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sidebar {
+  min-width: 240px;
+  max-width: 260px;
+  background: rgba(20, 30, 40, 0.7);
+  border-radius: 16px;
+  padding: 24px 18px;
+  margin-top: 8px;
+  box-shadow: 0 2px 16px 0 rgba(0, 212, 254, 0.08);
+}
+
+.filterBox {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.filterTabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.tab,
+.tabActive {
+  background: none;
+  border: 1.5px solid #00D4FE;
+  color: #00D4FE;
+  border-radius: 12px;
+  padding: 6px 18px;
+  font-size: 15px;
+  font-family: Lato, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tabActive {
+  background: #00D4FE;
+  color: #fff;
+}
+
+.priceLabelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.priceLabel {
+  color: #fff;
+  font-size: 15px;
+  font-family: Lato, sans-serif;
+}
+
+.priceValue {
+  color: #00D4FE;
+  font-size: 15px;
+  font-family: Lato, sans-serif;
+}
+
+.priceSlider {
+  width: 100%;
+  accent-color: #00D4FE;
+}
+
+.coursesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  width: 100%;
+  margin-top: 0;
+}
+
+@media (max-width: 1100px) {
+  .contentRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+  .coursesGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 750px) {
+  .heading {
+    font-size: 28px;
+  }
+  .subheading {
+    font-size: 15px;
+  }
+  .contentRow {
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 8px;
+  }
+  .sidebar {
+    padding: 12px 8px;
+  }
+  .coursesGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

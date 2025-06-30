@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import CourseCard from "./courseCard/CourseCard";
 import styles from "./onforexcourseSection.module.css";
 
-export default function OnForexCourseSection() {
+export default function OnForexCourseSection({ heading = "No matter your level of expertise or interest, our courses provide valuable insights and practical knowledge to help you succeed in the financial markets. Enroll now and take the next step in your trading journey!", showBlueEllipse = true }) {
   const [courses, setCourses] = useState([]);
   const [current, setCurrent] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(1);   
@@ -33,16 +33,11 @@ export default function OnForexCourseSection() {
 
   return (
     <section className={styles.section}>
-      <span className={styles.blueEllipse} />
+      {showBlueEllipse && <span className={styles.blueEllipse} />}
 
       <div className={styles.topRow}>
         <div className={styles.textBlock}>
-          <p className={styles.subheading}>
-            No matter your level of expertise or interest, our courses provide
-            valuable insights and practical knowledge to help you succeed in the
-            financial markets. Enroll now and take the next step in your trading
-            journey!
-          </p>
+          <p className={heading === "Related Courses" ? `${styles.relatedCoursesHeading}` : styles.subheading}>{heading}</p>
         </div>
 
     

@@ -140,6 +140,15 @@
   white-space: nowrap;
 }
 
+.relatedCoursesHeading {
+  color: #FFF;
+font-family: Sansation;
+font-size: 44px;
+font-weight: 700;
+line-height: 52px; /* 118.182% */
+text-transform: capitalize;
+}
+
 /* =============== Media queries =============== */
 
 @media (max-width: 900px) {
@@ -238,3 +247,5 @@
     gap: 16px;
   }
 }
+
+

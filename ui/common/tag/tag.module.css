@@ -32,7 +32,7 @@ line-height: 24px;
 
   width: 100px;
   height: 4px;
-  background: #FFF;
+  background: var(--primary) !important;
   border-radius: 100px 100px 0px 0px;
 }
 

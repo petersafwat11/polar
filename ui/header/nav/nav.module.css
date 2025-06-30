@@ -2,9 +2,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-   padding: 6px 120px; 
+    padding: 6px 120px; 
+    background-color: transparent;
+    z-index: 100;
+}
+/* FOR DIFFRENT BACKGROUNDS */
+.default,
+.checkout,
+.conttact,
+.loin
+.forgetpass{
     background-color: transparent;
 }
+
+
+
+.contactNavWrapper,
+.forexNavWrapper,.checkoutNavWrapper,.loginNavWrapper,.forgetpassNavWrapper{
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+
 
 .nav {
     display: flex;
@@ -264,3 +284,4 @@ margin-left: 32px;
     stroke-linecap: round;
   }
 }
+

@@ -1,14 +1,14 @@
 [
-  {"image": "/forexcourse.png", "tags": ["Beginner"], "title": "Forex Trading Course (For Beginners)"},
-  {"image": "/latestcourse2.png", "tags": ["Beginners + Advanced"], "title": "Forex Trading Course (For Beginners)"},
-  {"image": "/forexcourse.png", "tags": ["Advanced"], "title": "Forex Trading Course (For Beginners)"},
-  {"image": "/latestcourse2.png", "tags": ["Beginner"], "title": "Forex Trading Course (For Beginners)"},
-  {"image": "/forexcourse.png", "tags": ["Beginners + Advanced"], "title": "Forex Trading Course (For Beginners)"},
-  {"image": "/latestcourse2.png", "tags": ["Advanced"], "title": "Forex Trading Course (For Beginners)"},
-  {"image": "/forexcourse.png", "tags": ["Beginner"], "title": "Forex Trading Course (For Beginners)"},
-  {"image": "/latestcourse2.png", "tags": ["Beginners + Advanced"], "title": "Forex Trading Course (For Beginners)"},
-  {"image": "/forexcourse.png", "tags": ["Advanced"], "title": "Forex Trading Course (For Beginners)"},
-  {"image": "/latestcourse2.png", "tags": ["Beginner"], "title": "Forex Trading Course (For Beginners)"},
-  {"image": "/latestcourse2.png", "tags": ["Beginners + Advanced"], "title": "Forex Trading Course (For Beginners)"},
-  {"image": "/latestcourse2.png", "tags": ["Advanced"], "title": "Forex Trading Course (For Beginners)"}
+  {"id": 1, "image": "/forexcourse.png", "tags": ["Beginner"], "title": "Forex Trading Course (For Beginners)"},
+  {"id": 2, "image": "/latestcourse2.png", "tags": ["Beginners + Advanced"], "title": "Forex Trading Course (For Beginners)"},
+  {"id": 3, "image": "/forexcourse.png", "tags": ["Advanced"], "title": "Forex Trading Course (For Beginners)"},
+  {"id": 4, "image": "/latestcourse2.png", "tags": ["Beginner"], "title": "Forex Trading Course (For Beginners)"},
+  {"id": 5, "image": "/forexcourse.png", "tags": ["Beginners + Advanced"], "title": "Forex Trading Course (For Beginners)"},
+  {"id": 6, "image": "/latestcourse2.png", "tags": ["Advanced"], "title": "Forex Trading Course (For Beginners)"},
+  {"id": 7, "image": "/forexcourse.png", "tags": ["Beginner"], "title": "Forex Trading Course (For Beginners)"},
+  {"id": 8, "image": "/latestcourse2.png", "tags": ["Beginners + Advanced"], "title": "Forex Trading Course (For Beginners)"},
+  {"id": 9, "image": "/forexcourse.png", "tags": ["Advanced"], "title": "Forex Trading Course (For Beginners)"},
+  {"id": 10, "image": "/latestcourse2.png", "tags": ["Beginner"], "title": "Forex Trading Course (For Beginners)"},
+  {"id": 11, "image": "/latestcourse2.png", "tags": ["Beginners + Advanced"], "title": "Forex Trading Course (For Beginners)"},
+  {"id": 12, "image": "/latestcourse2.png", "tags": ["Advanced"], "title": "Forex Trading Course (For Beginners)"}
 ] 

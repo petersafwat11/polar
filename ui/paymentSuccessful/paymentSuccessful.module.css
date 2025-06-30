@@ -1,81 +1,93 @@
 .container {
   width: 853px;
   height: 656px;
-  background-color: linear-gradient(
-    180deg,
-    rgba(0, 212, 254, 0.05) 10.61%,
-    rgba(68, 105, 232, 0.02) 100%
-  );
-  border: 1px solid rgba(133, 191, 249, 0.3);
+  background: linear-gradient(180deg, rgba(0, 212, 254, 0.05) 10.61%, rgba(68, 105, 232, 0.02) 100%);
+  border: 1px solid rgba(133, 191, 249, 0.30);
   backdrop-filter: blur(32px);
-  padding: 4.5rem 2rem 7.3rem;
+  border-radius: 24px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  margin: 0 auto;
+  overflow: hidden;
 }
+
+
+.container img, .container svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .amount {
-  color: #fff;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: capitalize;
-  margin-top: 3.7rem;
+color: #FFF;
+font-family: Sansation;
+font-size: 48px;
+font-weight: 700;
+line-height: normal;
+text-transform: capitalize;
+margin-top:37px;
+margin-bottom:6px;
 }
 .success-message {
-  color: #fff;
-  text-align: center;
-  font-size: 4.8rem;
-  font-weight: 700;
-  text-transform: capitalize;
-  margin-top: 0.6rem;
+display: flex;
+width: 461px;
+height: 56px;
+color: #FFF;
+text-align: center;
+font-family: Sansation;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: capitalize;
+flex-shrink: 0;
+margin-bottom: 16px;
 }
 .message {
-  color: #fff;
-  text-align: center;
-  leading-trim: both;
-  text-edge: cap;
-  font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 184.548%;
-  margin-top: 1.6rem;
+color: #FFF;
+text-align: center;
+font-family: Lato;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 29.528px; 
 }
 .time {
-  color: #fff;
-  text-align: center;
-  leading-trim: both;
-  text-edge: cap;
-  font-size: 2.8rem;
-  font-weight: 500;
-  line-height: 105.456%;
-  margin-top: 3.4rem;
+  color: #FFF;
+text-align: center;
+leading-trim: both;
+text-edge: cap;
+font-family: Lato;
+font-size: 28px;
+font-weight: 500;
+line-height: 29.528px; /* 105.456% */
+margin-bottom:38px;
+margin-top:34px
+;
 }
 .buttons {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  margin-top: 3.8rem;
+  gap: 20px;
+
 }
 .history {
-  color: #00d4fe;
-  text-align: center;
-  font-family: "Nunito Sans";
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 155%;
-  display: flex;
-  padding: 1.4rem 3rem;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3rem;
-  border: 3px solid #0b1113;
+color: #00D4FE;
+font-family: "Nunito Sans";
+font-size: 18px;
+font-weight: 400;
+line-height: 28px; /* 155.556% */
+
 }
 .done {
-  display: flex;
-  width: 10.4rem;
-  padding: 1.2rem 2.4rem;
-  justify-content: center;
-  align-items: center;
+ display: flex;
+width: 104px;
+padding: 12px 24px;
+justify-content: center;
+align-items: center;
+ 
   border-radius: 52px;
   background: linear-gradient(
     90deg,
@@ -91,5 +103,68 @@
   color: #fff;
   font-size: 18px;
   font-weight: 400;
-  line-height: 155%;
+  line-height: 28px;
+  font-family: Lato;
+
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    border-radius: 0;
+    margin: 0;
+    padding: 100px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .amount {
+  font-size: 32px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .success-message {
+    font-size: 24px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+    text-align: center;
+    display: block;
+    line-height: 32px;
+  }
+  .message {
+    font-size: 16px;
+    line-height: 29.5px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .time {
+  
+    margin-top: 16px;
+    text-align: center;
+  }
+  .buttons {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: stretch;
+  }
+  .history, .done {
+    width: 100%;
+  font-size: 18px;
+  }
+  .container img {
+    width: 120px !important;
+    height: 120px !important;
+    margin-bottom: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

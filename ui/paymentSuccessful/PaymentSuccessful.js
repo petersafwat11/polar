@@ -2,7 +2,9 @@ import React from "react";
 import classes from "./paymentSuccessful.module.css";
 import Image from "next/image";
 import { lato, ptSansCaption, nunitoSans } from "@/app/fonts";
-const PaymentSuccessful = () => {
+import Button from "@/ui/common/button/Button";
+
+const PaymentSuccessful = ({ onDone }) => {
   return (
     <div className={`${ptSansCaption.className} ${classes["container"]}`}>
       <Image
@@ -20,10 +22,8 @@ const PaymentSuccessful = () => {
         2024-12-06, 11:30 AM
       </p>
       <div className={classes["buttons"]}>
-        <button className={`${nunitoSans.className} ${classes["history"]}`}>
-          View Transaction History
-        </button>
-        <button className={`${lato.className} ${classes["done"]}`}>Done</button>
+        <Button className={classes["history"]}>View Transaction History</Button>
+        <button className={`${lato.className} ${classes["done"]}`} onClick={onDone}>Done</button>
       </div>
     </div>
   );
