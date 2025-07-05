@@ -22,6 +22,11 @@ export default function OnForexCourseSection({ heading = "No matter your level o
       .then(setCourses);
   }, []);
 
+  // Debug logging for troubleshooting
+  if (typeof window !== "undefined") {
+    console.log("cardsPerView:", cardsPerView, "window width:", window.innerWidth);
+  }
+  console.log("courses.length:", courses.length);
   
   const totalSlides  = Math.ceil(courses.length / cardsPerView);
   const currentSlide = Math.floor(current / cardsPerView);

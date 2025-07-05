@@ -23,7 +23,7 @@ const Welcome = () => {
   
 {isMobile ? (
   <>
-    {/* ✅ Tag + Heading فوق الصورة */}
+
     <div className={classes.mobileTop}>
       <Tag className={classes.academyTag}>
         Best Trading Academy in the UK
@@ -33,18 +33,17 @@ const Welcome = () => {
       </h2>
     </div>
 
-    {/* ✅ الصورة */}
+
     <div className={classes.imageContainer}>
       <Image
         src="/welcome.png"
         alt="Welcome Image"
-        width={500}
-        height={500}
+        width={550}
+        height={514}
         className={classes.image}
       />
     </div>
 
-    {/* ✅ النص */}
     <div className={classes.textBlock}>
       <p className={classes.text}>
         Welcome! We are a team of seasoned Forex traders with over 7 years of
@@ -56,13 +55,13 @@ const Welcome = () => {
       </p>
     </div>
 
-    {/* ✅ الزرار */}
+  
     <div className={classes.buttonWrapper}>
-      <Button className={classes.button}>Know More</Button>
+      <Button className={classes.button} style={{ width: 167 }}>Know More</Button>
     </div>
   </>
 ) : (
-  // 💻 نسخة الديسكتوب تفضل زي ما هي
+
   <>
     <div className={classes.imageContainer}>
       <Image
@@ -88,7 +87,7 @@ const Welcome = () => {
         financial markets. Explore our performance history and customer
         reviews to see the impact we've made.
       </p>
-      <Button className={classes.button}>Know More</Button>
+      <Button className={classes.button} style={{ width: 155 }}>Know More</Button>
     </div>
   </>
 )}

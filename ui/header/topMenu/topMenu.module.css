@@ -1,11 +1,11 @@
 .container {
   display: flex;
   flex-direction: row; 
-  justify-content: space-between;
   align-items: center;
+gap: 10px;
   width: 100%;             
   height: 60px;                
-  padding: 6px 120px;         
+  padding: 6px 120px ;         
   background: rgba(255, 255, 255, 0.02);
   border-bottom: 1px solid rgba(1, 188, 228, 0.24);
   backdrop-filter: blur(4.5px);
@@ -15,7 +15,8 @@
   display: flex;
   align-items: center;
   gap: 15px;   
-  margin-right: auto;                 
+  margin-right: auto;          
+
 }
 .social-elem {
   display: flex;
@@ -56,19 +57,20 @@ flex-shrink: 0;
 .trustpilot {
   display: flex;
   align-items: center;
+  
 
 }
 
 .star {
   color: var(--primary);
-  font-size: 2.4rem;
+  font-size: 1.9rem;
   display: flex;
   align-items: center;
 }
 
 .para {
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 1.1rem;
   margin-right: 27px;
   
 }
@@ -99,115 +101,59 @@ background: rgba(1, 188, 228, 0.02);
 width: 24px;
 height: 24px;
 flex-shrink: 0;
-margin:12px ;
 }
 
 .num {
 margin-left: 8px;
 color: #EFEFEF;
-text-align: center;
 font-family: Lato;
 font-size: 16px;
-font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
 
-@media (max-width: 1050px) {
- .container {
- display: flex;
-height: 36px;
-padding: 6px 18px;
-justify-content: space-between;
-align-items: center;
-align-self: stretch;
-  }
-  .content {
-    max-width: 100%;
-    padding-right: 0;
-  }
-  .heading {
-    font-size: 48px;
-    line-height: 58px;
-    margin-bottom: 24px;
-  }
+@media (max-width: 1080px) {
   .container {
-  display: flex;
-  flex-direction: row; 
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;             
-  height: 60px;                
-  padding: 4px 18px;         
-  background: rgba(255, 255, 255, 0.02);
-  border-bottom: 1px solid rgba(1, 188, 228, 0.24);
-  backdrop-filter: blur(4.5px);
-}
 
-.social {
-  display: flex;
-  align-items: center;
-  gap: 4px;   
-  margin-right: auto;                 
-}
-.social-elem {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-width: 24px;
-height: 24px;
-  border-radius: 50%;
-  background: rgba(1, 188, 228, 0.02);
-  border: 1px solid rgba(1, 188, 228, 0.09);
-  backdrop-filter: blur(25px);
-padding: 6px;
-  flex-shrink: 0;
-}
+    height: 36px;
+    padding: 0px 18px;
 
-.social-icon {
-  align-self: center;
-  color: #01bce4;
-width: 14px;
-height: 14px;
-flex-shrink: 0;
-  transition: color 0.2s ease;
-  cursor: pointer;
-  
-}
 
-.social-icon:hover {
-  color: #fff;
-}
-
-.info {
-  display: flex;
-  align-items: center;
+    justify-content: center;                 
+    padding: 6px 18px;         
  
-}
+  }
 
-.trustpilot {
-  display: flex;
-  align-items: center;
-}
-
-.star {
-  color: var(--primary);
-  font-size: 1.4rem;
-  display: flex;
-  align-items: center;
-}
-
-.para {
-  color: #fff;
-  font-size: 0.8rem;
-  margin-right: 13px;
+  .social {
+    gap: 4px;   
+    margin-right: auto;            
   
+  }
+  .social-elem {
+    width: 24px;
+    height: 24px;
+  }
+  .social-icon {
+    width: 14px;
+    height: 14px;
+  }
+  .five-stars img {
+    width: 67px ;
+    height: 12px ;
+  }
+  .star{
+    font-size: 1.1rem;
+  }
+  .para {
+    font-size: 0.7rem;
+    margin-right: 13px;
+  }
+  .phone {
+    display: none;
+  }
+
+
 }
 
 
-.phone {
-  display: none
-}
 
-
-}

@@ -133,7 +133,6 @@ export default function BlogSection() {
           </span>
         </div>
       </div>
-      <div className={styles.blueEllipseEffect}></div>
     </section>
   );
 }

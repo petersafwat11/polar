@@ -1,0 +1,43 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.input {
+  max-width: 541px;
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(1, 188, 228, 0.53);
+  background: linear-gradient(180deg, rgba(0, 212, 254, 0.02) 0%, rgba(64, 221, 218, 0.02) 100%);
+  color: #A2A2A2;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  outline: none;
+  resize: none;
+}
+
+.input:focus {
+  border: 1.5px solid #00D4FE;
+}
+
+.payBtn,
+.appleBtn,
+.cryptoBtn {
+  width: 100%;
+  border-radius: 52.257px;
+  background: linear-gradient(90deg, #00D4FE 0%, #01D1FD 26%, #07C8FB 43%, #10B9F8 57%, #1DA5F4 70%, #2F8AEF 81%, #4469E8 92%, #574CE3 100%);
+  color: #FFF;
+  border: none;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+} 

@@ -1,24 +1,29 @@
 .coursesSection {
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   background: #0B1113;
-  padding: 0px 120px;
-  
+  padding: 0px 120px 100px 120px;
+  justify-content: center;
+  align-items: center;
 }
+
 
 .headingRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
-padding-right: 39px;
-  margin: auto;
- 
+ width: 100%;
+max-width:  1200px;
+  margin: 0 auto;
+
 }
+
 
 .heading {
 color: #FFF;
 font-family: Sansation;
 font-size: 44px;
-font-style: normal;
 font-weight: 700;
 line-height: normal;
 text-transform: capitalize;
@@ -61,17 +66,21 @@ display: block;
 
 .coursesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   align-items: stretch;
   width: 100%;
   max-width: 1400px;
-  margin: 60px auto;
+  margin: 60px 0;
+  gap: 24px;
+  padding: 0; 
 }
+
 
 .card {
  display: flex;
 width: 282px;
+height:407px;
 padding: 12px 12px 24px 12px;
 flex-direction: column;
 align-items: center;
@@ -109,7 +118,6 @@ backdrop-filter: blur(30px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 12px;
 }
 
 .title {
@@ -117,9 +125,9 @@ backdrop-filter: blur(30px);
 text-align: center;
 font-family: Sansation;
 font-size: 24px;
-font-style: normal;
+
 font-weight: 700;
-line-height: 32px; /* 133.333% */
+line-height: 32px; 
 text-transform: capitalize;
 margin-bottom: 8px;
 }
@@ -141,7 +149,6 @@ color: #FFF;
 text-align: center;
 font-family: Lato;
 font-size: 16px;
-font-style: normal;
 font-weight: 500;
 line-height: 17.917px; /* 111.979% */
   border: none;
@@ -162,7 +169,7 @@ line-height: 17.917px; /* 111.979% */
   justify-content: center;
   align-items: center;
   gap: 16px;
-margin-bottom: 100px; 
+
 }
 
 .dot {
@@ -182,112 +189,155 @@ border-radius: 50%;
 border: none;
 border-radius: 50%;
 }
-@media (max-width: 900px) and (min-width: 750px) {
+@media (min-width: 901px) and (max-width: 1220px) {
   .coursesSection {
-    padding: 0 24px;
+    padding: 0px 32px 60px 32px;
   }
+  .headingRow {
+padding: 0px 39px
+
+}
 
   .heading {
-    font-size: 32px;
-    text-align: center;
+    font-size: 30px;
+    line-height: 38px;
   }
 
   .headingRow {
-    flex-direction: column;
+    padding-right: 0;
+    margin: 0;
+    flex-direction: row;
     align-items: center;
-    gap: 16px;
-  }
-
-  .arrowsContainer {
-    display: none;
+    justify-content: space-between;
   }
 
   .coursesGrid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    width: 100%;
-    margin:0px;
+    display: grid;
+     grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 40px 0;
   }
 
-  .card {
-    width: 100%;
-    max-width: 450px;
+ .card {
+  width: 100%;
+  max-width: none;
+  padding: 12px;
+}
+
+
+  .imageWrapper {
+    margin-bottom: 10px;
+    height: 150px;
+  }
+
+  .image {
+    height: 150px;
+  }
+
+  .title {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 6px;
+  }
+
+  .desc {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .viewMore {
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .dotsContainer {
+    gap: 10px;
+  }
+
+  .arrowBtn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .arrowBtn img {
+    width: 22px;
+    height: 22px;
   }
 }
-@media (max-width: 750px) {
+
+@media (max-width: 900px) {
   .coursesSection {
-    padding: 10px 18px ;
+    padding: 0px 18px 40px 18px ;
   }
   .heading {
     text-align: center;
     font-size: 24px;
-    font-style: normal;
     font-weight: 700;
     line-height: 32px; 
   }
    .imageWrapper {
     width: 100%;
-    aspect-ratio: 16 / 9;    
-    border-radius: 12px;
+   max-width:315px;
+   height:175px;
+    border-radius: 14px;
     overflow: hidden;
+      margin-bottom: 12px;
+
   }
   .headingRow {
-
 padding-right: 0px;
   margin:0;
+      flex-direction: column;
+    align-items: center;
 
 }
-
   .image {
     width: 100%;
-    height: 100%;
+   max-width:315px;
+   height:175px;
     object-fit: cover;       
-    border-radius: 12px;
   }
     .arrowsContainer {
       display: none;
 }
-  .headingRow {
-    flex-direction: column;
-    align-items: center;
-  }
+  
   .coursesGrid {
     display: flex;
     overflow-x: hidden;
     width: 100%;
     margin-top: 24px;
+    gap: 0px;
   }
   .card {
-    width: 100%;
-    display: flex;
-    padding: 12px 12px 24px 12px;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+  width: 339px;
+  height: 367px;
+    
     align-self: stretch;
   }
-}
   
-  .imageWrapper {
-    width: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-  .image {
-  height: 175px;
-align-self: stretch;
- width: 100%;
-    height: 100%;
-    object-fit: cover;      
-    border-radius: 12px;
-    border: 0.442px solid #FFF;
+.title {
 
+font-size: 20px;
+line-height: 30px; 
+}
 
-  }
+.desc {
+font-size: 16px;
+line-height: 26px; /* 150% */
 
+}
+.dotsContainer {
+ 
+  gap: 12px;
 
+}
+}
 
 
 

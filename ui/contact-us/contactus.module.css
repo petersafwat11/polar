@@ -1,4 +1,4 @@
-.contactUsPage {
+ .contactUsPage {
   position: relative;
   width: 100%;
 
@@ -14,7 +14,7 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-background: url("/view.png") center / cover no-repeat;
+background: url("/contbg.png") center / cover no-repeat;
 }
 
 .contactCard {
@@ -65,49 +65,6 @@ margin-bottom: 71px;
   justify-content: center;
 }
 
-.form {
-  flex: 1 1 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.row {
-  display: flex;
-  gap: 15px;
-}
-
-.input, .textarea {
- 
-  border-radius: 10px;
-border: 1px solid rgba(133, 191, 249, 0.30);
-background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.01) 100%);
-
-
-color: #A2A2A2;
-font-family: Lato;
-font-size: 20px;
-font-weight: 400;
-line-height: 30px; /* 150% */
-
-padding: 15px 20px;
-
-  outline: none;
-  resize: none;
-  width: 100%;
-  transition: border 0.2s;
-}
-
-.input:focus, .textarea:focus {
-  border: 1.5px solid #00D4FE;
-}
-
-.textarea {
- height:180px;
-}
-
-
-
 .contactImage {
  
   width: 436px;
@@ -146,12 +103,6 @@ border-radius: 29px;
 
   }
 
-  .input,
-  .textarea {
-    font-size: 18px;
-    padding: 12px 16px;
-  }
-
 }
 
 @media (max-width: 750px) {
@@ -181,15 +132,6 @@ margin-bottom: 24px;
  .blueEllipseLeft {
   display: none;
  }
-  .form {
-    width: 100%;
-  }
-  .form button,
-  .form .submitBtn {
-    width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-  }
 }
 
 .blueEllipseLeft {

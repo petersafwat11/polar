@@ -1,9 +1,9 @@
 .container {
 width: 100%;
 flex-shrink: 0;
- background:  url('/Process.png') center / cover no-repeat lightgray;
- 
-  padding: 100px 120px;
+ background:  url('/Process.png') center / cover no-repeat;
+  height: 715px;
+  padding: 100px 126px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,31 +11,21 @@ flex-shrink: 0;
   border-bottom:  1px solid rgba(4, 177, 210, 0.24);
 }
 .processTag {
-  margin-bottom: 25px;
-padding: 0px 21px;
-  min-width: 180px;
-  font-size: 20px !important;
-  height: 48px !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 24px;
+width:142px !important;
+  font-size: 18px !important;
+  height: 41px !important;
 font-family: Lato;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; /* 133.333% */
+line-height: 24px; 
 }
-
 .heading {
   position: relative;
   z-index: 1;
   color: #fff;
   font-weight: 700;
-  text-align: center;
   margin-bottom: 58px;
 font-family: Sansation;
 font-size: 44px;
-font-style: normal;
 line-height: normal;
 text-transform: capitalize;
 }
@@ -44,21 +34,21 @@ text-transform: capitalize;
   position: relative;
   z-index: 1;
   display: flex;
-  gap: 32px;
+  gap: 24px;
   justify-content: center;
-  flex-wrap: wrap;
 align-items: stretch;
   
 }
 
 .card {
   width: 384px;
+background: transparent;
+  height:346px;
   display: flex;
   padding: 40px;
   flex-direction: column;
   align-items: center;
   gap: 24px;
-
   border-radius: 8px;
   border: 1px solid rgba(0, 212, 254, 0.53);
   background: linear-gradient(180deg, rgba(0, 212, 254, 0.02) 0%, rgba(64, 221, 218, 0.02) 100%);
@@ -71,77 +61,111 @@ align-items: stretch;
 }
 
 .icon {
-
+  display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .title {
   color: #fff;
-  font-size: 1.2rem;
+  font-size:24px;
   font-weight: 700;
-  margin-bottom:24px 0px;
-  text-align: center;
+line-height: 32px; 
+
 }
 
 .desc {
 color: rgba(255, 255, 255, 0.60);
 text-align: center;
 font-family: "Nunito Sans";
-font-size: 20px;
-font-style: normal;
 font-weight: 400;
-line-height: 30px; /* 150% */  color: #b0b8c1;
-  font-size: 1rem;
-  text-align: center;
-  margin: 0;
+line-height: 30px; 
+font-size: 20px;
 }
 
-
-
-
-@media (max-width: 768px) {
+@media (min-width: 751px) and (max-width: 1200px) {
   .container {
-    padding: 40px 17px;
-    background:
-  linear-gradient(0deg, rgba(11, 17, 19, 0.81) 0%, rgba(11, 17, 19, 0.81) 100%),
-  url('/Process.png') center / cover no-repeat;
-
+    padding: 60px 40px;
+    height: auto;
   }
 
+  .cards {
+    flex-wrap: nowrap;
+    gap: 16px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 280px;
+    min-width: 200px;
+    height: auto;
+    padding: 24px;
+    gap: 16px;
+  }
+
+  .icon img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .desc {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .heading {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 32px;
+  }
+
+  .processTag {
+    font-size: 15px !important;
+    height: 34px !important;
+    width: 120px !important;
+  }
+}
+
+@media (max-width: 750px) {
+.container {
+    padding: 40px 17px;
+    height: auto;
+  }
   .heading {
 font-size: 24px;
 font-weight: 700;
 line-height: 32px; /* 133.333% */
 text-transform: capitalize;
-margin: 24px 0px;
+margin-bottom:24px;
 }
-
-
+.icon img{
+width: 81px;
+height: 81px;
+}
 .cards {
   gap: 16px;
-   position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
 .card {
   width: 339px;
-  display: flex;
-  padding: 40px;
+height:291px;
   flex-direction: column;
   align-items: center;
-  border-radius: 8px;
-  background: transparent;
 
 }
 
 
 .title {
-margin: 24px 0px;
+
 font-family: Sansation;
 font-size: 20px;
-font-style: normal;
+
 font-weight: 700;
 line-height: 30px; /* 150% */
 text-transform: capitalize;
@@ -152,10 +176,6 @@ color: rgba(255, 255, 255, 0.60);
 text-align: center;
 font-family: "Nunito Sans";
 font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 26px; /* 162.5% */
-}
 
-
-}
+font-weight: 400;  
+line-height: 26px; }}

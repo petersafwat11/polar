@@ -5,6 +5,7 @@ const TopBar = () => {
   return (
     <div style={{ position: 'relative' }}>
       <span className={classes["blue-ellipse-2"]}></span>
+         <div className={classes.container}>
       <div className={classes.topBar}>
         <h1 className={classes.heading}>#1 Source For Trading Courses</h1>
         <p className={classes.desc}>
@@ -15,7 +16,8 @@ const TopBar = () => {
             className={classes.searchInput}
             type="text"
             placeholder="Search here"
-          />
+            />
+            </div>
         </div>
       </div>
     </div>

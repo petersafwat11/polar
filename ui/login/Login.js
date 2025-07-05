@@ -1,23 +1,15 @@
-"use client";
-import React from "react";
-import classes from "./login.module.css";
-import Image from "next/image";
-import InputGroup from "./input-group/InputGroup";
-const Login = () => {
-  const [data, setData] = useState({
-    username: "",
-    password: "",
-  });
+import styles from "./login.module.css";
+import LoginForm from "../forms/LoginForm/LoginForm";
+
+export default function Login() {
   return (
-    <div className={classes["container"]}>
-      <Image width="100" height="100" src="/svg/login.svg" alt="logo" />
-      <div className={classes["inputs"]}>
-        <InputGroup data={data} setData={setData} datakey="Username" />
-        <InputGroup data={data} setData={setData} datakey="Password" />
+    <div className={styles.loginPage}>
+      <div className={styles.bgImage}></div>
+      <div className={styles.blueEllipseEffectLeft}></div>
+      <div className={styles.loginCard}>
+        <img src="/svg/polarlogin.svg" alt="Polar Logo" className={styles.logo} />
+        <LoginForm />
       </div>
-      <button className={classes["login"]}>Login Now</button>
     </div>
   );
-};
-
-export default Login;
+}

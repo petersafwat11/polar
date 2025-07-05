@@ -41,8 +41,8 @@ const TopMenu = () => {
             <Image
               src="/svg/fivestar.svg"
               alt="five stars"
-              width={77}
-              height={25}
+              width={84.1}
+              height={15.75}
             />
           </div>
         </div>

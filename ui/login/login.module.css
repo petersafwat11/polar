@@ -1,14 +1,64 @@
-.login {
+.loginPage {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
   display: flex;
-  padding: 1.4rem 3rem;
-  justify-content: center;
   align-items: center;
-  border-radius: 3rem;
-  border: 3px solid #0b1113;
-  color: #01d1fd;
-  text-align: center;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 155.556%;
+  justify-content: center;
+  background: #0B1113;
+  padding: 188px 0 186px 0;
+  isolation: isolate;
+}
+
+.bgImage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url("/loginbg.png") center / cover no-repeat;
+}
+
+
+.loginCard {
+  position: relative;
+  z-index: 1;
+ width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.logo {
+  width: 268px;
+  height:61px;
+  margin-bottom: 38px;
+}
+
+.blueEllipseEffectLeft {
+  position: absolute;
+  top: 330px;
+  left: -400px;
+  width: 322px;
+  height: 322px;
+  border-radius: 322px;
+  background: linear-gradient(90deg, #00D4FE 0%, #01D1FD 26%, #07C8FB 43%, #10B9F8 57%, #1DA5F4 70%, #2F8AEF 81%, #4469E8 92%, #574CE3 100%);
+  filter: blur(237px);
+  flex-shrink: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media(max-width:600px){
+    .blueEllipseEffectLeft{display: none;}
+    .loginPage{
+        padding: 101px 18px 416px 18px;
+      
+    }
+   .logo {
+  width: 120px;
+  height:51.5px;
+  margin-bottom: 40px;
+}
 }

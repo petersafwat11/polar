@@ -6,7 +6,6 @@ import { FiPhone, FiMail } from "react-icons/fi";
 const Footer = () => {
   return (
     <footer className={classes["container"]}>
-      <span className={classes["blueEllipse"]}></span>
       <div className={classes["top"]}>
         <div className={classes["first"]}>
           <Image width={100} height={80} src="/svg/logo.svg" alt="logo" className={classes.logo} />
@@ -29,8 +28,8 @@ const Footer = () => {
         </div>
         <div className={classes["second"]}>
           <h4 className={classes["title"]}>Our Courses</h4>
-          <div className={classes["options"]}>
-            <span className={classes.footerOptionSecondary}>Forex Trading Course (For Beginners)</span>
+          <div className={classes["optionsSecond"]}>
+            <span className={classes.footerOptionSecondary}>Forex Trading Advance Course (Level 1 + Level 2)</span>
             <span className={classes.footerOptionSecondary}>Forex Trading Advance Course (Level - 1)</span>
             <span className={classes.footerOptionSecondary}>Forex Trading Advance Course (Level - 2)</span>
             <span className={classes.footerOptionSecondary}>Forex Trading Complete Package</span>
@@ -38,7 +37,7 @@ const Footer = () => {
         </div>
         <div className={classes["third"]}>
           <h4 className={classes["title"]}>Quick Links</h4>
-          <div className={classes["options"]}>
+          <div className={classes["optionsThird"]}>
             <Link href="/about" className={classes.footerOptionSecondary}>About Polar Trading Services</Link>
             <Link href="/contact" className={classes.footerOptionSecondary}>Contact Us</Link>
             <Link href="/" className={classes.footerOptionSecondary}>Home</Link>

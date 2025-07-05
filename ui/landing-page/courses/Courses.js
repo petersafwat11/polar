@@ -23,7 +23,7 @@ const Courses = ({
       }
     };
 
-    handleMediaChange(mediaQuery); // Initial run
+    handleMediaChange(mediaQuery); 
     mediaQuery.addEventListener("change", handleMediaChange);
 
     return () => mediaQuery.removeEventListener("change", handleMediaChange);
@@ -37,10 +37,8 @@ const Courses = ({
   const goRight = () => setCurrent((prev) => Math.min(DOTS_COUNT - 1, prev + 1));
   const goTo = (idx) => setCurrent(idx);
 
-  return (
-    <div className={classes.coursesSection}>
-      <div className={classes.container}>
-        <div className={classes.headingRow}>
+  return (<>
+       <div className={classes.headingRow}>
           <h2 className={classes.heading}>{sectionTitle}</h2>
           <div className={classes.arrowsContainer}>
             <button className={classes.arrowBtn} onClick={goLeft} disabled={current === 0}>
@@ -51,6 +49,9 @@ const Courses = ({
             </button>
           </div>
         </div>
+    <div className={classes.coursesSection}>
+      <div className={classes.container}>
+      
 
         <div className={classes.coursesGrid}>
           {visibleCards.map((course, idx) => (
@@ -78,6 +79,7 @@ const Courses = ({
         </div>
       </div>
     </div>
+    </>
   );
 };
 

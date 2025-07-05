@@ -1,9 +1,25 @@
 'use client';
 import styles from './work.module.css';
+import { useEffect, useState } from 'react';
 
-export default function Work() {
+export default function Work({ className = "" }) {
+  const [placeholder, setPlaceholder] = useState('Subscribe To Our Newsletter');
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 920) {
+        setPlaceholder('Enter your email');
+      } else {
+        setPlaceholder('Subscribe To Our Newsletter');
+      }
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${className}`}>
       <section className={styles.workTogether}>
         <div className={styles.contentOverlay}>
           <h2 className={styles.title}>Let's Work Together</h2>
@@ -14,7 +30,7 @@ export default function Work() {
             <input
               className={styles.input}
               type="email"
-              placeholder="Subscribe To Our Newsletter"
+              placeholder={placeholder}
               disabled
             />
             <button className={styles.button} type="button" disabled>

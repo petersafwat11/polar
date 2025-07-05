@@ -58,9 +58,9 @@ export default function Navbar({ variant = "default" }) {
               onClick={() => setMenuOpen(!menuOpen)}
             >
               {menuOpen ? (
-                <img src="/svg/close.svg" alt="Close menu" width={32} height={32} />
+                <img src="/svg/close.svg" alt="Close menu" width={24} height={24} />
               ) : (
-                <img src="/svg/menu.svg" alt="Open menu" width={32} height={32} />
+                <img src="/svg/menu.svg" alt="Open menu" width={24} height={24} />
               )}
             </button>
           </div>
@@ -79,7 +79,7 @@ export default function Navbar({ variant = "default" }) {
               aria-label="Close menu"
               onClick={() => setMenuOpen(false)}
             >
-              <img src="/svg/close.svg" alt="Close menu" width={32} height={32} />
+              <img src="/svg/close.svg" alt="Close menu" width={24} height={24} />
             </button>
             <nav className={classes.mobileNav}>
               <Link href="/forex" className={classes.option} onClick={() => setMenuOpen(false)}>FOREX</Link>

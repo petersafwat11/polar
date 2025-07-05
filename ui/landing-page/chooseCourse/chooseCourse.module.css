@@ -1,9 +1,8 @@
 .chooseCourseSection {
   width: 100%;
-  min-height: 100vh;
   border-top: 1px solid rgba(88, 179, 234, 0.28);
   background: #0B1113 url("/choosecourse.png") center center / cover no-repeat;
-  padding: 100px 120px 0px 120px;
+  padding: 100px 120px 94px 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,19 +34,18 @@
   gap: 24px;
   justify-content: center;     
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 .card {
   flex: 0 0 282px;             
-max-height: 298px;
+height: 298px;
   border-radius: 24px;
   position: relative;
   overflow: hidden;
+  padding:41px 6px 50px 18px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(9px);
-  padding: 32px 20px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,7 +78,7 @@ max-height: 298px;
   align-items: center;
   justify-content: center;
   margin-bottom: 18px;
-  background: rgba(87, 76, 227, 0.07);
+  background:rgba(87, 76, 227, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.12);
   overflow: hidden;
 }
@@ -95,89 +93,52 @@ flex-shrink: 0;
 .cardTitle {
   color: #fff;
   font-family: Sansation;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
+  line-height: 30px; /* 125% */
   text-align: center;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
 }
-
 .cardDesc {
   color: rgba(255, 255, 255, 0.7);
   font-family: "Nunito Sans";
   font-size: 16px;
   text-align: center;
-  padding-right: 4.5px;
-  padding-left: 16px;
+  font-weight: 400;
+
+line-height: 24px; 
 }
 
-@media (max-width: 650px) {
+@media (max-width: 850px) {
   .chooseCourseSection {
-    padding: 40px 18.5px;
+    padding: 40px 18px 0px 18px;
   }
   .heading {
 font-size: 24px;
 line-height: 32px; 
-    padding: 0 23.5px;
+    padding: 0 26.5px;
+      margin: 16px 0;
   }
   .subheading {
    color: rgba(255, 255, 255, 0.60);
 font-size: 16px;
 font-weight: 400;
 line-height: 26px; 
-padding: 0px 10px;
+  margin-bottom: 0px;
+  padding: 0 18px;
   }
   .coursesGrid {
     gap: 24px;
-    padding:0px 18px ;
-  }
-  .card {
-    flex: 0 0 100%;
-    height: 298px;
+    padding:60px 28.5px 40px 28.5px;
   }
 
-.iconWrapper{
-  gap: 27px;
-}
+    .card {
+ 
+  padding:41px 4.5px 41px 16.5px;
 
-.cardTitle {
- display: flex;
-flex-direction: column;
-gap: 15px;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: 30px; /* 125% */
-text-transform: capitalize;
-}
-
-.cardDesc {
-  color: rgba(255, 255, 255, 0.60);
-text-align: center;
-font-family: "Nunito Sans";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; /* 150% */
-}
-
-
-}
-
-
-@media (min-width: 601px) and (max-width: 900px) {
-  .chooseCourseSection {
-    padding: 48px 0 32px;
   }
-  .heading {
-    font-size: 28px;
-    padding: 0 40px;
-  }
-  .subheading {
-    font-size: 16px;
-    margin-bottom: 24px;
-    padding: 0 40px;
-  }
-  .coursesGrid {
-    gap: 20px;
-  }
+
+
+
+
 }

@@ -1,6 +1,7 @@
 "use client";
 import styles from "./courseCard.module.css";
 import Button from "../../common/button/Button";
+;
 
 export default function CourseCard({
   image,

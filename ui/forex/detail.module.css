@@ -1,17 +1,21 @@
 .detailPage{
   position:relative;
   overflow:hidden;
-  background-color:#0B1113
+  background-color:#0B1113;
+  z-index: 0;
 }
 
 .bgImage{
   position:absolute;
   inset:0;
   background:url("/view.png") center/cover no-repeat;
-  opacity:.3;
   mix-blend-mode:luminosity;
+  opacity: 0.3;
   pointer-events:none;
-  z-index:0
+  z-index:0;
+  max-height:1416px;
+    pointer-events: none;
+
 }
 
 .effectWrapper {
@@ -22,6 +26,9 @@
   height: 322px;
   pointer-events: none;
   z-index: 1;
+    pointer-events: none;
+
+
 }
 
 .blueEllipseEffect,
@@ -78,19 +85,10 @@ left: -190px;
 .detailHeader{
   display:flex;
   gap:70px;
-  align-items:flex-start;
-  flex-wrap:wrap
+ 
 }
 
-.detailImageWrapper{
-  border-radius:24px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex:1 0 0;
-  border:1px solid rgba(255,255,255,.23);
-  width:100%
-}
+
 
 .detailImage{
   max-width:540px;
@@ -290,10 +288,237 @@ left: -190px;
 }
 
 
-
-@media(max-width:600px){
-  .detailContent{
-    z-index:1;
-    padding:64px 18px
+@media (min-width: 851px) and (max-width: 1199px) {
+  .detailContent {
+    padding: 80px 40px;
   }
+
+  .detailHeader {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .detailImage {
+    max-width: 400px;
+    height: 400px;
+    margin: 0 auto;
+  }
+
+  .detailTitle {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .detailPrice {
+    font-size: 24px;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .detailOldPrice {
+    font-size: 16px;
+  }
+
+  .detailDiscount {
+    font-size: 14px;
+    padding: 4px 10px;
+    height: auto;
+  }
+
+  .detailDesc {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .detailTabs {
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .detailTabActive {
+    width: 140px;
+    height: 40px;
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+
+  .detailTab {
+    font-size: 20px;
+  }
+
+  .detailBody {
+    padding: 0 40px 60px 40px;
+  }
+
+  .detailAboutTitle {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .detailBodyText {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .detailTabReview {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+
+  .relatedCoursesHeading {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+
+}
+
+
+@media (max-width: 850px) {
+  .detailHeader {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }   
+.detailContent{
+  padding:64px 18px;
+
+}
+.detailImage{
+  max-width:323px;
+  height: 320px;
+ margin:0 auto;
+  
+}
+
+
+.detailTitle{
+  margin-bottom:16px;
+font-size: 24px;
+line-height: 32px; 
+
+}
+
+.detailPrice{
+  gap:12px;
+  font-size:28px;
+  margin-bottom:16px
+}
+
+.detailOldPrice{
+  font-size:18px;
+}
+.detailStarsRow{
+  margin-bottom:16px
+}
+.detailDiscount{
+  padding:1px 8px;
+  font-size:16px;
+}
+.detailSectionTitle{
+  margin-top:16px;
+}
+.detailSectionLine{
+  margin-top:16px;
+  margin-bottom:16px;
+}
+.detailDesc{
+font-family: "Nunito Sans";
+font-size:14px;
+}
+ .detailBuyBtn {
+    width: 100%;
+    margin-top:16px;
+  }.detailBody{
+  position:relative;
+  z-index:3;
+  padding:0px 18px 40px 18px
+}
+
+.detailAboutTitle{
+  font-size:24px;
+  line-height:32px;
+  text-transform:capitalize;
+  margin-bottom:16px
+}
+
+.detailTabs{
+  gap:8.85px;
+  margin-bottom:16px
+}
+
+.detailTabActive{
+  width: 116px;
+  height:32px;
+padding: 6.643px 15.856px 7.357px 16.144px;
+  font-size:16px;
+
+}
+
+
+
+.detailBodyText{
+  font-size:14px;
+  line-height:24px
+}
+
+
+
+
+
+
+
+
+
+
+.detailTabReview{
+ 
+  font-size:16px;
+  margin-left:8px;
+
+}
+
+.relatedCoursesHeading{
+
+  font-size:258px;
+  line-height:32px;
+}
+
+.relatedCoursesMargin{
+  margin-bottom:100px
+}
+  .detailImage {
+    order:3;
+  }
+
+  .detailDescWrapper {
+    order: 1;
+  }
+
+  .detailInfo {
+    order: 2;
+  }
+
+  .detailBuyBtn {
+    width: 100%;
+    margin-top:16px;
+  }
+
+  .detailPage :global(.onforexcourseSection-module__Lz06Bq__relatedCoursesHeading) {
+
+font-size: 24px;
+line-height: 32px; 
+padding-top: 40px;
+  }
+  .effectWrapper{
+  top:1417;
+    right: -70px;
+  width: 145px;
+  height: 145px}
+  
 }

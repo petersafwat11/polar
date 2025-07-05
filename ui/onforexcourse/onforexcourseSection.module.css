@@ -2,8 +2,7 @@
 
 .section {
   width: 100%;
-  margin-top: 100px;
-  padding: 0 120px;
+  padding: 100px 120px 0px 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,17 +17,13 @@
   font-weight: 400;
   line-height: 30px;
   text-transform: capitalize;
-  width: 73%;
+  max-width:874px;
+  width:100%;
 }
 
 .subheading {
-  color: rgba(255, 255, 255, 0.70) !important;
-  font-family: Lato;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  text-transform: capitalize;
+
 }
 
 .cardsRow {
@@ -45,7 +40,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-bottom: 16px;
 }
 
 .arrow {
@@ -74,24 +68,23 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-top: 12px;
 }
 
-.dot {
+.dot,
+.activeDot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #222C3A;
   cursor: pointer;
   transition: background 0.2s;
 }
 
+.dot {
+  background: rgba(0, 212, 254, 0.10);
+}
+
 .activeDot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
   background: #00D4FE;
-  cursor: pointer;
 }
 
 .topRow {
@@ -100,12 +93,11 @@
   align-items: flex-start;
   width: 100%;
   max-width: 1200px;
-  margin-bottom: 18px;
 }
 
 .arrowsRow {
   display: flex;
-  gap: 18px;
+  gap: 24px;
   align-items: center;
   margin-top: 4px;
 }
@@ -123,16 +115,6 @@
   z-index: 0;
 }
 
-
-.actionsRow {
-  display: flex;
-  flex-direction: row;
-  gap: 12px;
-  justify-content: flex-end;
-  margin-top: 16px;
-  flex-wrap: nowrap;
-}
-
 .viewMoreBtn,
 .quickBuyBtn {
   width: auto;
@@ -142,72 +124,115 @@
 
 .relatedCoursesHeading {
   color: #FFF;
-font-family: Sansation;
-font-size: 44px;
-font-weight: 700;
-line-height: 52px; /* 118.182% */
-text-transform: capitalize;
+  font-family: Sansation;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 52px;
+  text-transform: capitalize;
 }
 
-/* =============== Media queries =============== */
+/* =============== Media Queries =============== */
 
-@media (max-width: 900px) {
+@media (min-width: 1020px) and (max-width: 1450px) {
   .cardsRow {
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
     gap: 16px;
-    flex-direction: column;
-    align-items: center;
+    margin: 40px 0;
+    padding: 0;
   }
+
   .textBlock {
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 28px;
   }
+
   .subheading {
-    font-size: 16px;
-    text-align: center;
+    font-size: 18px;
   }
+}
+
+
+@media (max-width: 1019px) {
   .topRow {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     gap: 12px;
+    text-align: center;
   }
+
   .arrowsRow {
     display: none;
   }
 }
+
+
+@media (max-width: 850px) {
+  .section {
+    padding: 100px 18px;
+  }
+
+  .cardsRow {
+    flex-wrap: nowrap;
+    margin: 24px 0;
+
+    padding: 0;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .textBlock,
+  .subheading {
+color: rgba(255, 255, 255, 0.60);
+font-family: "Nunito Sans";
+font-size: 16px;
+
+line-height: 26px; 
+  }
+
+  .topRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .arrowsRow {
+    display: none;
+  }
+}
+
 
 @media (max-width: 650px) {
   .section {
     padding: 0 18px;
-    margin-top: 40px;
+    box-sizing: border-box;
   }
-  .textBlock {
-    width: 100%;
-    text-align: start;
-  }
-  .subheading {
-    color: rgba(255, 255, 255, 0.60);
-    font-size: 16px;
-    line-height: 26px;
-    text-align: start;
-  }
+
   .cardsRow {
-    gap: 16px;
     flex-direction: column;
     align-items: center;
-    margin: 40px 0;
+    justify-content: center;
+    gap: 16px;
+  margin: 24px 0;
+
+    padding: 0;
+    padding: 0;
   }
+
+ 
+
   .sliderContainer {
     flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
   }
-  .topRow {
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-    text-align: center;
-  }
-  .arrowsRow {
-    display: none;
-  }
+
   .blueEllipse {
     width: 180px;
     height: 180px;
@@ -216,36 +241,3 @@ text-transform: capitalize;
     filter: blur(150px);
   }
 }
-
-@media (min-width: 751px) and (max-width: 1024px) {
-  .section {
-    padding: 0 40px;
-    margin-top: 80px;
-  }
-  .textBlock {
-    font-size: 18px;
-    line-height: 28px;
-    width: 90%;
-  }
-  .subheading {
-    font-size: 18px;
-    line-height: 28px;
-  }
-  .cardsRow {
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .topRow {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    text-align: center;
-  }
-  .arrowsRow {
-    justify-content: center;
-    gap: 16px;
-  }
-}
-
-

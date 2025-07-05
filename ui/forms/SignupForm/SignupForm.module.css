@@ -1,0 +1,48 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  color: #A2A2A2;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.input {
+  border-radius: 10px;
+  border: 1px solid rgba(133, 191, 249, 0.30);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.01) 100%);
+  color: #A2A2A2;
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  padding: 15px 20px;
+  outline: none;
+  width: 100%;
+  transition: border 0.2s;
+}
+
+.input:focus {
+  border: 1.5px solid #00D4FE;
+}
+
+.buttonWrapper {
+  margin-top: 16px;
+}
+
+.signupButton {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+} 

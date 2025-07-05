@@ -1,347 +1,54 @@
-/* -------- Hero -------- */
-.hero {
-  position: relative;
-  width: 100%;
-
-  height: 583px;
-  padding: 102px 0px 100px 0px;
-  background: url("/svg/forexbgeffect.svg") center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.heading {
-  color: #fff;
-  font-family: "Nunito Sans";
-  font-size: 73px;
-  font-weight: 700;
-  text-transform: capitalize;
-  margin-bottom: 25px;
-  padding: 0px 158px;
-}
-
-.subheading {
-  color: rgba(255, 255, 255, 0.8);
-  font-family: "Nunito Sans";
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 30px;
-  
-  padding: 0 297px;
-}
-
-.bannerTag {
-  margin-bottom: 30px;
-  max-width: 524px;
-  width:100%;
-  padding: 10px 36px 0;
-  font-family: "Nunito Sans";
-  font-size: 20px;
-  height: 51px;
-  line-height: 30px;
-  gap: 6px;
-}
-
-/* -------- Courses Section -------- */
-.courses {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  gap: 20px;
-  padding: 0 124px 0 120px;
-  transform: translateY(-40px);
-  display: flex;
-  
-
-
-}
-
-.filterContainer {
-  width: 100%;
-  max-width: 282px;
-  height: 202px;
-  flex-shrink: 0;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 212, 254, 0.53);
-background: linear-gradient(180deg, rgba(0, 212, 254, 0.02) 0%, rgba(64, 221, 218, 0.02) 100%);
-backdrop-filter: blur(30px);
-
-  padding: 24px 27px 24px 23px;
-
-}
-
-.priceRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #00D4FE;
-  font-family: "Nunito Sans";
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 30px; 
-  margin-top:18px;
-
-}
-
-.chevron {
-  background: none;
-  border: none;
-  box-shadow: none;
-  color: #00D4FE;
-  font: inherit;
-  cursor: pointer;
-}
-
-.priceLabelsRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 24px;
-}
-
-.priceLabel {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 30px;
-font-family: "Nunito Sans";
-
-  align-items: center;
-  display: flex;
-}
-
-.priceNumber {
-  color: rgba(255, 255, 255, 0.80);
-  font-family: 'Nunito Sans';
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 30px;
-  margin: 0px;
-}
-
-.slider {
-  width: 100%;
-  height: 4px;
-  border-radius: 4px;
-  background: var(--slider-bg, #fff);
-  appearance: none;
-  outline: none;
-  border: none;
-  margin-bottom: 18px;
-}
-
-.slider::-webkit-slider-runnable-track {
-  background: transparent;
-  height: 6px;
-  border-radius: 4px;
-}
-
-.slider::-webkit-slider-thumb {
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #00D4FE;
-  border: 2px solid #fff;
-  cursor: pointer;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.slider::-moz-range-track {
-  background: transparent;
-  height: 3px;
-  border-radius: 4px;
-}
-
-.tabs {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0px;
-}
-
-.tabs .bots {
-  border: none;
-background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.01) 100%);
-
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  color: #00D4FE;
-  font-family: Inter;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 30px;
-  max-width: 120px;
-  width: 100%;
-  height: 44px;
-  padding: 7px 36px;
-border-radius: 51px;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-
-.tabs .bots::before {
-  content: "";
+.effectWrapper {
   position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 0.6px;
-  background: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-
-.tabs .viewAllBtn {
-  background: none;
-  border: none;
-  color: rgba(255, 255, 255, 0.80);
-  font-family: "Nunito Sans";
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 30px;
-  transition: color 0.2s;
-  cursor: pointer;  
-}
-
-.cardGrid {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
-  gap: 24px;
-}
-
-.forexCard {
-  border-radius: 24px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.01) 100%);
-  width: 100%;
-  max-width: 282px;
-  padding: 12px 12px 24px 12px;
-  height: 357px;
-  gap: 18px;
-}
-
-.forexImageWrapper {
-  overflow: hidden;
-  height: 151px;
-  border-radius: 20px;
-  border: 0.448px solid #FFF;
-  margin-bottom:18px;
-}
-
-.forexImageWrapper img,
-.forexImageWrapper .image {
-  object-fit: cover;
-}
-
-.forexCardTitle {
- color: #FFF;
-font-family: Sansation;
-font-size: 20px;
-font-weight: 700;
-line-height: 30px; /* 150% */
-text-transform: capitalize;
-  width: 100%;
-margin: 12px 0px;
-}
-
-@media (max-width: 600px) {
-.hero {
-  position: relative;
-  width: 100%;
-  padding: 24px 18px ;
-   height: auto ;
-    min-height:380 ;
-
-}
-.heading{
-font-size: 32px;
-font-weight: 600;
-line-height: 42px; 
-  padding: 0px ;
-    margin-bottom: 16px;
-
-
-}
-
-.subheading {
- color: rgba(255, 255, 255, 0.80);
-text-align: center;
-font-size: 14px;
-font-weight: 400;
-line-height: 24px; 
-  padding: 0 ;
-}
-
-.bannerTag {
-margin-bottom: 16px;
-align-items: center;font-size: 12px;
-font-weight: 400;
-line-height: 30px; 
-padding: 10px 22.999px 0px 23px;
-
-display: inline-flex;
-  
-}
-
-
-/* -------- Courses Section -------- */
-.courses {
-  flex-direction: column;
-  gap: 24px;
-  padding: 0 18px;
-  align-items: center;
-  justify-content: center;
-}
-
-.filterContainer {
-  max-width: 339px;
-  padding: 24px 32.5px 25px 27.6px;
-
-
-}
-  .cardGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .forexCard {
-    max-width: 339px;
-height:358;
-    width: 100%;
-  }
-}
-
-.blue-ellipse-forex {
-  position: absolute;
-  top:1573;
-  left: -64;
-  right: 1343;
-  bottom: 1130;
-  width: 161px;
-  height: 161px;
-  border-radius: 50%;
- 
-  filter: blur(201.92px);
-  z-index: 0;
-  pointer-events: none;
-}
-.white-ellipse-forex {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-
-border-radius: 322px;
-background: linear-gradient(90deg, #00D4FE 0%, #01D1FD 26%, #07C8FB 43%, #10B9F8 57%, #1DA5F4 70%, #2F8AEF 81%, #4469E8 92%, #574CE3 100%);
-filter: blur(237px);
-  mix-blend-mode: screen;
+  width: 322px;
+  height: 322px;
   pointer-events: none;
   z-index: 1;
 }
 
+.blueEllipseEffect {
+    border-radius: 274.344px;
+width: 250.344px;
+height: 250.344px;
+  background: linear-gradient(
+    90deg,
+    #00D4FE 0%, #01D1FD 26%, #07C8FB 43%, #10B9F8 57%,
+    #1DA5F4 70%, #2F8AEF 81%, #4469E8 92%, #574CE3 100%
+  );
+  flex-shrink: 0;
+filter: blur(201.9239959716797px);
+
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+
+.saltEffectRight {
+  position: absolute;
+  inset: 0;
+  width: 100px;
+  height: 220px;
+  transform: scale(3.2);
+  opacity: 0.5;
+  z-index: 1;
+  pointer-events: none;
+  object-fit: cover;
+}
+
+
+
+.topRight {
+  top: 1400px;
+  right: -370px;
+}
+
+.topLeft {
+  top: 460px;
+  left: -270px;
+}
+
+.bottomLeft {
+  top: 1550px;
+  left: -250px;
+}

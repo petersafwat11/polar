@@ -1,28 +1,27 @@
 .container {
   display: flex;
-  justify-content: space-between;
+justify-content: flex-start;
   align-items: center;
-  padding: 40px 120px;
-  color: var(--foreground);
-  min-height: 80vh;
+  padding: 80px 120px;
+ max-height: 590px;
   position: relative;
   z-index: 1;
   width: 100%;
+  margin: 0 auto;
+    overflow: hidden;
 }
-
 .content {
-  max-width: 50%;
+max-width:610px;
+width: 100%;
   z-index: 1;
-  padding-right: 2rem;
 }
 
 .subheading {
 color: var(--primary);
 font-family: Lato;
 font-size: 20px;
-font-style: normal;
 font-weight: 400;
-line-height: 30px; /* 150% */
+line-height: 30px; 
 margin-bottom: 24px;
 }
 
@@ -30,7 +29,6 @@ margin-bottom: 24px;
 color: #FFF;
 font-family: "Nunito Sans" !important;
 font-size: 70px;
-font-style: normal;
 font-weight: 600;
 line-height: 82px; 
 text-transform: capitalize;
@@ -44,20 +42,17 @@ padding: 0;
 }
 
 .button {
-  background-color: transparent;
-  color: var(--primary);
-  border: 1px solid var(--primary);
-  padding: 14px 30px;
+ 
 
+  padding: 14px 30px;
   border-radius: 25px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin: bottom 30px;;
-text-align: center;
-font-family: Lato;
 font-size: 18px;
 font-weight: 400;
-line-height: 28px; /* 155.556% */
+line-height: 28px; 
+width: 196px !important;
+height:56px !important;
+margin-top:0px !important; 
 }
 
 .button:hover {
@@ -66,17 +61,17 @@ line-height: 28px; /* 155.556% */
 }
 
 .imageContainer {
-  width: 50%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+max-width: 665px;
+width: 100%;
   z-index: 1;
   position: relative;
 }
 
 .image {
-  max-width: 100%;
-  height: auto;
+max-width:665px;
+width: 100%;
+  height:486px;
 }
 
 .viewCoursesBtn {
@@ -97,30 +92,6 @@ line-height: 28px; /* 155.556% */
   overflow: hidden;
 }
 
-.circleText {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  pointer-events: none;
-  transform: rotate(-25deg);
-}
-
-.playIcon {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .viewCoursesImg {
   width: 100%;
   height: 100%;
@@ -139,23 +110,23 @@ line-height: 28px; /* 155.556% */
     Tablet and below
 ============================ */
 
-@media (min-width: 850px) and (max-width: 1024px) {
+@media (min-width: 851px) and (max-width: 1199px) {
   .container {
-    flex-direction: row;
-      padding:30px 20px;
-    min-height: 65vh;
-    gap: 40px;
+    padding: 30px 60px;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
   }
 
-  .content {
-    max-width: 55%;
-  
+  .content,
+  .imageContainer {
+    flex: 1 0 0;
   }
 
   .heading {
-    font-size: 40px;
-    line-height: 50px;
-    margin-bottom: 20px;
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 32px;
   }
 
   .subheading {
@@ -163,24 +134,28 @@ line-height: 28px; /* 155.556% */
     line-height: 28px;
   }
 
-  .imageContainer {
-    max-width: 45%;
+  .button {
+    width: 180px;
+    height: 52px;
+    font-size: 16px;
+    margin-bottom: 40px;
   }
 
   .image {
-    width: 100%;
-    height: auto;
+    height: 420px;
   }
 
   .viewCoursesBtn {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
+    left: 50%;
+    bottom: 30%;
   }
 }
 
 @media (max-width: 850px) {
   .container {
-    padding: 30px 0px;
+    padding: 19px 0px;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -190,24 +165,22 @@ line-height: 28px; /* 155.556% */
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+   
   }
 
   .heading {
     order: 1;
-    padding: 0 17px;
+    padding: 0 35px;
     margin-bottom: 12px;
     font-size: 32px;
-    line-height: 42px;
-  }
+    line-height: 42px;  }
 
   .subheading {
     order: 2;
     color: #01BCE4;
 text-align: center;
 font-size: 14px;
-font-style: normal;
+
 font-weight: 400;
 line-height: 30px; /* 214.286% */
 margin-bottom: 12px;
@@ -228,10 +201,12 @@ margin-bottom: 12px;
     justify-content: center;
     align-items: center;
     margin-top: 12px;
+ 
   }
   .image {
-    width: 100%;
-    height: auto;
+
+    width: 370px;
+    height: 270;
     display: block;
     object-fit: contain;
   }
