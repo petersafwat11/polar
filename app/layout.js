@@ -1,6 +1,6 @@
 import "./globals.css";
 import { lato } from "./fonts";
-import Header from "@/ui/header/Header";
+import HeaderClient from "@/ui/header/HeaderClient";
 import FooterWrapper from "@/ui/footer/FooterWrapper";
 
 export const metadata = {
@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
       </head>
       <body className={lato.className}>
-        <Header />     
+        <HeaderClient />     
         {children}
         <FooterWrapper />
       </body>

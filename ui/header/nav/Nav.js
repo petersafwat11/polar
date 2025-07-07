@@ -26,6 +26,7 @@ export default function Navbar({ variant = "default" }) {
   ${variant === "checkout" ? classes.checkoutNavWrapper : ""}
   ${variant === "login" ? classes.loginNavWrapper : ""}
   ${variant === "forgetpass" ? classes.forgetpassNavWrapper : ""}
+  ${variant === "signup" ? classes.signupNavWrapper : ""}
 `}>
 
         <div className={containerClass}>
@@ -57,11 +58,7 @@ export default function Navbar({ variant = "default" }) {
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               onClick={() => setMenuOpen(!menuOpen)}
             >
-              {menuOpen ? (
-                <img src="/svg/close.svg" alt="Close menu" width={24} height={24} />
-              ) : (
-                <img src="/svg/menu.svg" alt="Open menu" width={24} height={24} />
-              )}
+              <img src="/svg/menu.svg" alt="Open menu" width={24} height={24} />
             </button>
           </div>
         </div>

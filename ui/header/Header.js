@@ -14,6 +14,7 @@ export default function Header() {
   else if (pathname.startsWith("/checkout")) variant = "checkout";
    else if (pathname.startsWith("/login")) variant = "login";
    else if (pathname.startsWith("/forgetpass")) variant = "forgetpass";
+   else if (pathname.startsWith("/signup")) variant = "signup";
 
   return (
     <header className={classes.header}>

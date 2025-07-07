@@ -7,7 +7,8 @@
   align-items: center;
   justify-content: center;
   background: #0B1113;
-  padding: 158px 120px 100px 120px;
+  padding: 80px 0;
+
   isolation: isolate;
 }
 
@@ -36,10 +37,8 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 541px;
+  max-width: 600px;
   border-radius: 25px;
-  border: 1px solid rgba(133, 191, 249, 0.30);
-  background: linear-gradient(180deg, rgba(0, 212, 254, 0.05) 10.61%, rgba(68, 105, 232, 0.02) 100%);
   backdrop-filter: blur(32px);
   display: flex;
   flex-direction: column;
@@ -49,6 +48,20 @@
 }
 
 .logo {
-  width: 93px;
-  height: 28.175px;
+  width: 280px;
+  height: 120px;
 } 
+
+
+@media(max-width:600px){
+    .blueEllipseEffectLeft{display: none;}
+    .signupPage{
+        padding: 40px 18px 60px 18px;
+      
+    }
+   .logo {
+  width: 120px;
+  height:51.5px;
+  margin-bottom: 0px;
+}
+}

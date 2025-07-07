@@ -1,4 +1,5 @@
 import Button from "../../common/button/Button";
+import Link from "next/link";
 import styles from "./SignupForm.module.css";
 
 export default function SignupForm() {
@@ -19,6 +20,9 @@ export default function SignupForm() {
       <div className={styles.formGroup}>
         <label htmlFor="confirmPassword" className={styles.label}>Confirm Password</label>
         <input id="confirmPassword" type="password" className={styles.input} autoComplete="new-password" required />
+      </div>
+      <div className={styles.forgetPasswordWrapper}>
+        <Link href="/forgetpass" className={styles.forgetPasswordLink}>Forgot Password?</Link>
       </div>
       <div className={styles.buttonWrapper}>
         <Button type="submit" className={styles.signupButton}>

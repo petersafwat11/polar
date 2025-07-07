@@ -8,7 +8,6 @@
   align-items: center;
 }
 
-
 .headingRow {
   display: flex;
   align-items: center;
@@ -18,8 +17,6 @@ max-width:  1200px;
   margin: 0 auto;
 
 }
-
-
 .heading {
 color: #FFF;
 font-family: Sansation;
@@ -169,7 +166,6 @@ line-height: 17.917px; /* 111.979% */
   justify-content: center;
   align-items: center;
   gap: 16px;
-
 }
 
 .dot {
@@ -180,9 +176,6 @@ background-color: rgba(1, 188, 228, 0.10);
 border: none;
 border-radius: 50%;
 }
-
-
-
 
 .activeDot {
   background:#00D4FE ;
@@ -311,8 +304,9 @@ padding-right: 0px;
     display: flex;
     overflow-x: hidden;
     width: 100%;
-    margin-top: 24px;
     gap: 0px;
+      margin: 24px 0;
+
   }
   .card {
   width: 339px;
@@ -333,9 +327,7 @@ line-height: 26px; /* 150% */
 
 }
 .dotsContainer {
- 
   gap: 12px;
-
 }
 }
 

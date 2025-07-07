@@ -10,11 +10,12 @@
 .checkout,
 .conttact,
 .loin
-.forgetpass{
+.forgetpass
+.signup{
     background-color: transparent;
 }
 .contactNavWrapper,
-.forexNavWrapper,.checkoutNavWrapper,.loginNavWrapper,.forgetpassNavWrapper{
+.forexNavWrapper,.checkoutNavWrapper,.loginNavWrapper,.forgetpassNavWrapper,.signupNavWrapper{
   position: absolute;
   width: 100%;
   z-index: 1;

@@ -1,7 +1,10 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
+  max-width: 600px !important;
+  width: 600px !important;
+  box-sizing: border-box;
 }
 
 .formGroup {
@@ -20,17 +23,16 @@
 
 .input {
   border-radius: 10px;
-  border: 1px solid rgba(133, 191, 249, 0.30);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.01) 100%);
-  color: #A2A2A2;
-  font-family: Lato;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 30px;
+  border: 1.5px solid rgba(1, 188, 228, 0.53);
+  background: linear-gradient(180deg, rgba(0, 212, 254, 0.02) 0%, rgba(64, 221, 218, 0.02) 100%);
+  height: 60px;
   padding: 15px 20px;
-  outline: none;
-  width: 100%;
-  transition: border 0.2s;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  width: 100% !important;
+  max-width: 600px !important;
+  box-sizing: border-box;
 }
 
 .input:focus {
@@ -38,11 +40,48 @@
 }
 
 .buttonWrapper {
-  margin-top: 16px;
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .signupButton {
+  max-width: 200px;
   width: 100%;
-  min-width: 0;
-  box-sizing: border-box;
+}
+
+.forgetPasswordWrapper {
+  display: flex;
+  justify-content: start;
+
+}
+
+.forgetPasswordLink {
+  color: var(--primary);
+  font-size: 16px;
+  
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.forgetPasswordLink:hover {
+  color: white;
+}
+
+@media(max-width:600px){
+  .signupButton {
+    max-width:100%;
+  }
+  .form {
+    gap: 16px;
+    width: 100% ;
+    max-width: 100% !important;
+  }
+  .buttonWrapper {
+    margin-top: 8px;
+  }
+  .input {
+    max-width: 100% !important;
+  }
 } 

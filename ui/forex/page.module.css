@@ -2,13 +2,12 @@
 .hero {
   position: relative;
   width: 100%;
-
   height: 583px;
   padding: 102px 0px 100px 0px;
   background: url("/svg/forexbgeffect.svg") center/cover no-repeat;
   display: flex;
   flex-direction: column;
-  align-items: center;
+align-items: center;
   justify-content: center;
   text-align: center;
 }
@@ -21,7 +20,6 @@
   margin-bottom: 25px;
   padding: 0px 158px;
 }
-
 .subheading {
   color: rgba(255, 255, 255, 0.8);
   font-family: "Nunito Sans";
@@ -264,7 +262,7 @@ margin: 12px 0px;
 }
 
 
-@media (min-width: 920px) and (max-width: 1350px) {
+@media (min-width: 850px) and (max-width: 1350px) {
   .hero {
     padding: 80px 24px 80px 24px;
     height: auto;
@@ -290,8 +288,8 @@ margin: 12px 0px;
   }
   .courses {
     flex-direction: column;
-    gap: 32px;
-    padding: 0 24px;
+    gap: 20px;
+    padding: 0 20px;
     align-items: center;
     justify-content: center;
   }
@@ -323,22 +321,103 @@ margin: 12px 0px;
   flex-direction: row;
 }
 
-@media (max-width: 920px) {
-  .detailHeader.detailHeader {
-    flex-direction: column-reverse !important;
-    align-items: center !important;
-    text-align: center !important;
-  }
 
-  .detailInfo.detailInfo {
-    order: 1 !important;
-  }
+@media (max-width: 850px){
+  .hero {
+min-height: 597;
+  position: relative;
+  width: 100%;
+  padding: 64px 18px 0px 18px;
+justify-content: flex-start;
 
-  .detailImage.detailImage {
-    order: 2 !important;
-    max-width: 300px !important;
-    width: 100% !important;
-    height: auto !important;
-  }
+}
+.heading {
+font-size: 32px;
+font-weight: 600;
+line-height: 42px; 
+  padding: 0px ;
+    margin-bottom: 16px;
+
 }
 
+
+.subheading {
+font-size: 14px;
+font-weight: 400;
+line-height: 24px; 
+  padding: 0 ;
+}
+
+.bannerTag {
+margin-bottom: 16px;
+align-items: center;font-size: 12px;
+font-weight: 400;
+line-height: 30px; 
+padding: 10px 22.999px 0px 23px;
+display: inline-flex;
+gap: 12px;
+}
+ 
+.bannerTag img {
+  width: 28.001px;
+  height: 31px;
+}
+
+/* -------- Courses Section -------- */
+.courses {
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 18px;
+  align-items: center;
+  justify-content: center;
+    transform: translateY(-370px);
+}
+
+
+.filterContainer {
+  max-width: 339px;
+  padding: 24px 32.5px 25px 27.6px;
+
+
+}
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .forexCard {
+    max-width: 339px;
+height:358;
+    width: 100%;
+  }
+
+.forexImageWrapper {
+  overflow: hidden;
+  height: 151px;
+  border-radius: 20px;
+  border: 0.448px solid #FFF;
+  margin-bottom:18px;
+}
+
+.forexImageWrapper img,
+.forexImageWrapper .image {
+  object-fit: cover;
+}
+
+.forexCardTitle {
+ color: #FFF;
+font-family: Sansation;
+font-size: 20px;
+font-weight: 700;
+line-height: 30px; /* 150% */
+text-transform: capitalize;
+  width: 100%;
+margin: 12px 0px;
+}
+}
+
+@media (max-width:513) {
+  .courses {
+    transform: translateY(-320px);
+}
+}
