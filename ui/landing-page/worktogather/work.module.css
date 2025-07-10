@@ -4,7 +4,7 @@
   padding: 100px 0;
 }
 
-:global(.forexWorkWrapper) {
+.forexWorkWrapper {
   padding: 50px 0 100px 0px !important;
 }
 
@@ -16,7 +16,7 @@
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  background: url('/work1.png') center center / cover no-repeat;
+  background: url("/work1.png") center center / cover no-repeat;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -86,7 +86,7 @@
   height: 56px;
   margin-left: 8px;
   border-radius: 50px;
-  background: linear-gradient(90deg, #00D4FE 0%, #574CE3 100%);
+  background: linear-gradient(90deg, #00d4fe 0%, #574ce3 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,12 +101,12 @@
 }
 @media (min-width: 901px) and (max-width: 1280px) {
   .wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 100px 30px;
-}
+    display: flex;
+    justify-content: center;
+    padding: 100px 30px;
+  }
   .workTogether {
-    width:100%;
+    width: 100%;
     padding: 40px 60px;
     border-radius: 16px;
     background-size: cover;
@@ -147,7 +147,7 @@
     height: 50px;
   }
 
-  :global(.forexWorkWrapper) {
+  .forexWorkWrapper {
     padding: 100px 30px !important;
   }
 }
@@ -155,11 +155,11 @@
 @media (max-width: 900px) {
   .workTogether {
     width: 100%;
-   height: 436px;
+    height: 436px;
     padding: 40px 17px 80px;
     border-radius: 0;
     margin-bottom: 0;
-    background: linear-gradient(180deg, #00D4FE 0%, #574CE3 100%);
+    background: linear-gradient(180deg, #00d4fe 0%, #574ce3 100%);
     background-size: cover;
   }
 
@@ -199,18 +199,16 @@
     width: 100%;
     padding: 14px 26px 16px;
     border-radius: 100px;
-background: #FFF;
-min-height: 60px;
+    background: #fff;
+    min-height: 60px;
   }
 
   .button {
     width: 100%;
     padding: 16px 24px;
-    min-height: 56px; ;
+    min-height: 56px;
   }
-  :global(.forexWorkWrapper) {
+  .forexWorkWrapper {
     padding: 0 !important;
   }
 }
-
-
