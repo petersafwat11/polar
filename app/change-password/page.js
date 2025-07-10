@@ -1,6 +1,6 @@
 import ChangePasswordForm from "@/ui/forms/changePassword/Form";
 import styles from "./page.module.css";
-
+import { Suspense } from "react";
 export default function ChangePasswordPage() {
   return (
     <div className={styles.loginPage}>
@@ -12,7 +12,9 @@ export default function ChangePasswordPage() {
           alt="Polar Logo"
           className={styles.logo}
         />
-        <ChangePasswordForm />
+        <Suspense fallback={<div>Loading...</div>}>
+          <ChangePasswordForm />
+        </Suspense>
       </div>
     </div>
   );
