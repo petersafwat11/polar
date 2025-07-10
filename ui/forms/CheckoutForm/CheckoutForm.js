@@ -4,19 +4,28 @@ import styles from "./CheckoutForm.module.css";
 export default function CheckoutForm({ setShowSuccess }) {
   return (
     <form className={styles.form}>
-      <input type="text" placeholder="Full Name" className={styles.input} required />
-      <input type="email" placeholder="Email Address" className={styles.input} required />
-      <input type="password" placeholder="Password" className={styles.input} required />
-      <input type="text" placeholder="1st Line of Address" className={styles.input} required />
-      <input type="text" placeholder="City/Town" className={styles.input} required />
-      <input type="text" placeholder="Country" className={styles.input} required />
-      <input type="text" placeholder="Zip Code/Postcode" className={styles.input} required />
-      <input type="text" placeholder="Mobile Number" className={styles.input} required />
-
+      {[
+        "Full Name",
+        "Email Address",
+        "Password",
+        "1st Line of Address",
+        "City/Town",
+        "Country",
+        "Zip Code/Postcode",
+        "Mobile Number",
+      ].map((item, index) => (
+        <input
+          key={index}
+          type="text"
+          placeholder={item}
+          className={styles.input}
+          required
+        />
+      ))}
       <Button
         type="submit"
         className={styles.payBtn}
-        onClick={e => {
+        onClick={(e) => {
           e.preventDefault();
           setShowSuccess(true);
         }}
@@ -24,8 +33,12 @@ export default function CheckoutForm({ setShowSuccess }) {
         Pay by Credit card, Visa, Mastercard, Amex
       </Button>
 
-      <Button type="button" className={styles.appleBtn}>Pay by Apple Pay</Button>
-      <Button type="button" className={styles.cryptoBtn}>Pay by Crypto</Button>
+      <Button type="button" className={styles.appleBtn}>
+        Pay by Apple Pay
+      </Button>
+      <Button type="button" className={styles.cryptoBtn}>
+        Pay by Crypto
+      </Button>
     </form>
   );
-} 
+}

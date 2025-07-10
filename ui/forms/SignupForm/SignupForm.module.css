@@ -2,41 +2,25 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 600px !important;
-  width: 600px !important;
+  max-width: 600px;
+  width: 600px;
   box-sizing: border-box;
 }
 
-.formGroup {
+.forgetPasswordWrapper {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  justify-content: start;
 }
 
-.label {
-  color: #A2A2A2;
-  font-family: Lato;
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 4px;
+.forgetPasswordLink {
+  color: var(--primary);
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.2s;
 }
 
-.input {
-  border-radius: 10px;
-  border: 1.5px solid rgba(1, 188, 228, 0.53);
-  background: linear-gradient(180deg, rgba(0, 212, 254, 0.02) 0%, rgba(64, 221, 218, 0.02) 100%);
-  height: 60px;
-  padding: 15px 20px;
-  align-items: center;
-  gap: 10px;
-  align-self: stretch;
-  width: 100% !important;
-  max-width: 600px !important;
-  box-sizing: border-box;
-}
-
-.input:focus {
-  border: 1.5px solid #00D4FE;
+.forgetPasswordLink:hover {
+  color: white;
 }
 
 .buttonWrapper {
@@ -54,34 +38,18 @@
 .forgetPasswordWrapper {
   display: flex;
   justify-content: start;
-
 }
 
-.forgetPasswordLink {
-  color: var(--primary);
-  font-size: 16px;
-  
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.forgetPasswordLink:hover {
-  color: white;
-}
-
-@media(max-width:600px){
+@media (max-width: 600px) {
   .signupButton {
-    max-width:100%;
+    max-width: 100%;
   }
   .form {
     gap: 16px;
-    width: 100% ;
+    width: 100%;
     max-width: 100% !important;
   }
   .buttonWrapper {
     margin-top: 8px;
   }
-  .input {
-    max-width: 100% !important;
-  }
-} 
+}

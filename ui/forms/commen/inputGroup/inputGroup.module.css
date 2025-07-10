@@ -1,0 +1,71 @@
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  color: #a2a2a2;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.input {
+  border-radius: 10px;
+  border: 1px solid rgba(1, 188, 228, 0.53);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 212, 254, 0.02) 0%,
+    rgba(64, 221, 218, 0.02) 100%
+  );
+  height: 60px;
+  padding: 15px 20px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus {
+  border: 1.5px solid #00d4fe;
+}
+
+.inputError {
+  border: 1.5px solid #ff4757;
+}
+
+.error {
+  color: #ff4757;
+  font-size: 14px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Forgot Password specific label styling */
+.forgotPasswordLabel {
+  color: #fff;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 600px) {
+  .input {
+    max-width: 100%;
+  }
+
+  .formGroup {
+    gap: 6px;
+  }
+}

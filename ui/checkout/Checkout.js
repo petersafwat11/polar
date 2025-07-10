@@ -32,27 +32,42 @@ export default function Checkout() {
         <div className={styles.bgImage}></div>
         <div className={styles.blueEllipseEffectLeft}></div>
 
-        {showSuccess && !isMobile && typeof window !== 'undefined' && createPortal(
-          <div className={styles.successOverlay}>
-            <PaymentSuccessful onDone={() => setShowSuccess(false)} />
-          </div>,
-          document.body
-        )}
+        {showSuccess &&
+          !isMobile &&
+          typeof window !== "undefined" &&
+          createPortal(
+            <div className={styles.successOverlay}>
+              <PaymentSuccessful onDone={() => setShowSuccess(false)} />
+            </div>,
+            document.body
+          )}
 
         <div className={styles.checkoutCard}>
           <div className={styles.toprow}>
             <img src="/svg/logo.svg" alt="Polar Logo" className={styles.logo} />
             <div className={styles.cartSteps}>
               <span className={styles.step}>
-                <img src="/svg/checkstar.svg" alt="Check Star" className={styles.checkstarIcon} />
+                <img
+                  src="/svg/checkstar.svg"
+                  alt="Check Star"
+                  className={styles.checkstarIcon}
+                />
                 Cart
               </span>
               <span className={styles.step}>
-                <img src="/svg/checkstar.svg" alt="Check Star" className={styles.checkstarIcon} />
+                <img
+                  src="/svg/checkstar.svg"
+                  alt="Check Star"
+                  className={styles.checkstarIcon}
+                />
                 Review
               </span>
               <span className={styles.step}>
-                <img src="/svg/checkstar.svg" alt="Check Star" className={styles.checkstarIcon} />
+                <img
+                  src="/svg/checkstar.svg"
+                  alt="Check Star"
+                  className={styles.checkstarIcon}
+                />
                 Checkout
               </span>
             </div>
@@ -69,11 +84,17 @@ export default function Checkout() {
 
               <div className={styles.cartSummary}>
                 <div className={styles.cartImageWrapper}>
-                  <img src="/forexcourse.png" alt="Course" className={styles.cartImage} />
+                  <img
+                    src="/forexcourse.png"
+                    alt="Course"
+                    className={styles.cartImage}
+                  />
                 </div>
 
                 <div className={styles.cartInfo}>
-                  <div className={styles.cartTitle}>Forex Trading Advance Course (Level 1 + Level 2)</div>
+                  <div className={styles.cartTitle}>
+                    Forex Trading Advance Course (Level 1 + Level 2)
+                  </div>
 
                   <div className={styles.cartStars}>
                     <img src="/svg/bluestar.svg" alt="Blue Star" height={18} />
@@ -87,15 +108,28 @@ export default function Checkout() {
                 </div>
               </div>
 
-              <Button className={styles.payNowBtn} onClick={() => setShowSuccess(true)}>Pay Now</Button>
+              <Button
+                className={styles.payNowBtn}
+                onClick={() => setShowSuccess(true)}
+              >
+                Pay Now
+              </Button>
 
               <div className={styles.paymentIcons}>
-                <img src="/svg/discover.svg" alt="Visa" />
-                <img src="/svg/mastercard.svg" alt="Mastercard" />
-                <img src="/svg/visa.svg" alt="Amex" />
-                <img src="/svg/american.svg" alt="Discover" />
-                <img src="/svg/diners.svg" alt="Apple Pay" />
-                <img src="/svg/jcb.svg" alt="Crypto" />
+                {[
+                  { svg: "discover", alt: "Visa" },
+                  { svg: "mastercard", alt: "Mastercard" },
+                  { svg: "visa", alt: "Amex" },
+                  { svg: "american", alt: "Discover" },
+                  { svg: "diners", alt: "Apple Pay" },
+                  { svg: "jcb", alt: "Crypto" },
+                ].map((item, index) => (
+                  <img
+                    key={index}
+                    src={`/svg/${item.svg}.svg`}
+                    alt={item.alt}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -103,4 +137,4 @@ export default function Checkout() {
       </div>
     </>
   );
-} 
+}

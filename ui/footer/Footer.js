@@ -8,17 +8,32 @@ const Footer = () => {
     <footer className={classes["container"]}>
       <div className={classes["top"]}>
         <div className={classes["first"]}>
-          <Image width={100} height={80} src="/svg/logo.svg" alt="logo" className={classes.logo} />
+          <Image
+            width={100}
+            height={80}
+            src="/svg/logo.svg"
+            alt="logo"
+            className={classes.logo}
+          />
           <div className={classes["options"]}>
             <div className={classes.contactRow}>
-              <Image src="/svg/location.svg" width={20} height={20} alt="location" className={classes.icon} />
+              <Image
+                src="/svg/location.svg"
+                width={20}
+                height={20}
+                alt="location"
+                className={classes.icon}
+              />
               <span className={classes["option"]}>
-                Shop No. 26, 1st Floor, PPR Mall, Mithapur Rd, Ravindra Nagar, Phase 2, Urban Estate Phase II, Jalandhar, Punjab 144003
+                Shop No. 26, 1st Floor, PPR Mall, Mithapur Rd, Ravindra Nagar,
+                Phase 2, Urban Estate Phase II, Jalandhar, Punjab 144003
               </span>
             </div>
             <div className={classes.contactRow}>
               <FiMail className={classes.icon} size={20} />
-              <span className={classes["option"]}>tradewithabhinay@gmail.com</span>
+              <span className={classes["option"]}>
+                tradewithabhinay@gmail.com
+              </span>
             </div>
             <div className={classes.contactRow}>
               <FiPhone className={classes.icon} size={20} />
@@ -29,20 +44,33 @@ const Footer = () => {
         <div className={classes["second"]}>
           <h4 className={classes["title"]}>Our Courses</h4>
           <div className={classes["optionsSecond"]}>
-            <span className={classes.footerOptionSecondary}>Forex Trading Advance Course (Level 1 + Level 2)</span>
-            <span className={classes.footerOptionSecondary}>Forex Trading Advance Course (Level - 1)</span>
-            <span className={classes.footerOptionSecondary}>Forex Trading Advance Course (Level - 2)</span>
-            <span className={classes.footerOptionSecondary}>Forex Trading Complete Package</span>
+            {[
+              "Forex Trading Course (For Beginners)",
+              "Forex Trading Advance Course (Level 1 + Level 2)",
+              "Forex Trading Advance Course (Level - 1)",
+              "Forex Trading Advance Course (Level - 2)",
+              "Forex Trading Complete Package",
+            ].map((item, index) => (
+              <span key={index} className={classes.footerOptionSecondary}>
+                {item}
+              </span>
+            ))}
           </div>
         </div>
         <div className={classes["third"]}>
           <h4 className={classes["title"]}>Quick Links</h4>
           <div className={classes["optionsThird"]}>
-            <Link href="/about" className={classes.footerOptionSecondary}>About Polar Trading Services</Link>
-            <Link href="/contact" className={classes.footerOptionSecondary}>Contact Us</Link>
-            <Link href="/" className={classes.footerOptionSecondary}>Home</Link>
-            <Link href="/privacy" className={classes.footerOptionSecondary}>Privacy Policy</Link>
-            <Link href="/terms" className={classes.footerOptionSecondary}>Terms & Conditions</Link>
+            {[
+              "About Polar Trading Services",
+              "Contact Us",
+              "Home",
+              "Privacy Policy",
+              "Terms & Conditions",
+            ].map((item, index) => (
+              <Link key={index} href="/" className={classes.footerOptionSecondary}>
+                {item}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

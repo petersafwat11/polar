@@ -23,7 +23,12 @@ const PaymentSuccessful = ({ onDone }) => {
       </p>
       <div className={classes["buttons"]}>
         <Button className={classes["history"]}>View Transaction History</Button>
-        <button className={`${lato.className} ${classes["done"]}`} onClick={onDone}>Done</button>
+        <button
+          className={`${lato.className} ${classes["done"]}`}
+          onClick={onDone}
+        >
+          Done
+        </button>
       </div>
     </div>
   );
