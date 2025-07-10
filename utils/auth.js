@@ -1,99 +1,83 @@
+import axios from "axios";
+
 const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
 
+// Create axios instance with default config
+const axiosInstance = axios.create({
+  baseURL: API_BASE_URL,
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "application/json",
+  },
+  withCredentials: true, // Include cookies for authentication
+});
+
 class AuthAPI {
   static async request(endpoint, options = {}) {
-    const url = `${API_BASE_URL}${endpoint}`;
     const config = {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      mode: "cors",
-      credentials: "include", // Include cookies for authentication
       ...options,
       headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        ...(options.headers || {}),
+        ...options.headers,
       },
     };
 
-    // Debug logging
-    console.log("Making request to:", url);
-    console.log("With config:", JSON.stringify(config, null, 2));
-
     try {
-      const response = await fetch(url, config);
+      console.log("Making request to:", `${API_BASE_URL}${endpoint}`);
+      console.log("With config:", JSON.stringify(config, null, 2));
 
-      // Debug response headers
-      console.log(
-        "Response headers:",
-        Object.fromEntries([...response.headers])
-      );
+      const response = await axiosInstance({
+        url: endpoint,
+        ...config,
+      });
 
-      // Handle non-JSON responses (like network errors)
-      if (!response.ok) {
-        const errorData = await response.text();
-        console.log("Error response:", errorData);
-        let errorMessage;
-        try {
-          const errorJson = JSON.parse(errorData);
-          errorMessage = errorJson.message;
-        } catch (e) {
-          errorMessage = errorData;
-        }
-        throw new Error(
-          errorMessage || `HTTP error! status: ${response.status}`
-        );
-      }
-
-      const data = await response.json();
-      return data;
+      console.log("Response headers:", response.headers);
+      return response.data;
     } catch (error) {
       console.error("API request failed:", error);
-      throw error;
+
+      // Handle axios error responses
+      if (error.response) {
+        // Server responded with error status
+        const errorMessage =
+          error.response.data.message ||
+          `HTTP error! status: ${error.response.status}`;
+        throw new Error(errorMessage);
+      } else if (error.request) {
+        // Request was made but no response received
+        throw new Error("No response received from server");
+      } else {
+        // Error in request setup
+        throw error;
+      }
     }
   }
 
   static async login(credentials) {
     return this.request("/users/login", {
       method: "POST",
-      body: JSON.stringify(credentials),
+      data: credentials, // Axios uses data instead of body
     });
   }
 
   static async signup(userData) {
     return this.request("/users/signup", {
       method: "POST",
-      body: JSON.stringify(userData),
+      data: userData,
     });
   }
 
   static async forgotPassword(email) {
     return this.request("/users/forgotPassword", {
       method: "POST",
-      body: JSON.stringify({ email }),
+      data: { email },
     });
   }
 
   static async resetPassword(token, passwords) {
     return this.request(`/users/resetPassword/${token}`, {
       method: "PATCH",
-      body: JSON.stringify(passwords),
-    });
-  }
-
-  static async updatePassword(passwords) {
-    return this.request("/users/updateMyPassword", {
-      method: "PATCH",
-      body: JSON.stringify(passwords),
-    });
-  }
-
-  static async logout() {
-    return this.request("/users/logout", {
-      method: "GET",
+      data: passwords,
     });
   }
 }
