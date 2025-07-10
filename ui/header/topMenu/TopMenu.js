@@ -24,7 +24,7 @@ const TopMenu = () => {
     const fetchSocialLinks = async () => {
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/api/social`,
+          `${process.env.NEXT_PUBLIC_API_URL}/social`,
           {
             method: "GET",
             credentials: "include",
