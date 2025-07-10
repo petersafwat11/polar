@@ -7,19 +7,48 @@ class AuthAPI {
     const config = {
       headers: {
         "Content-Type": "application/json",
+        Accept: "application/json",
       },
+      mode: "cors",
       credentials: "include", // Include cookies for authentication
       ...options,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        ...(options.headers || {}),
+      },
     };
+
+    // Debug logging
+    console.log("Making request to:", url);
+    console.log("With config:", JSON.stringify(config, null, 2));
 
     try {
       const response = await fetch(url, config);
-      const data = await response.json();
 
+      // Debug response headers
+      console.log(
+        "Response headers:",
+        Object.fromEntries([...response.headers])
+      );
+
+      // Handle non-JSON responses (like network errors)
       if (!response.ok) {
-        throw new Error(data.message || "Something went wrong");
+        const errorData = await response.text();
+        console.log("Error response:", errorData);
+        let errorMessage;
+        try {
+          const errorJson = JSON.parse(errorData);
+          errorMessage = errorJson.message;
+        } catch (e) {
+          errorMessage = errorData;
+        }
+        throw new Error(
+          errorMessage || `HTTP error! status: ${response.status}`
+        );
       }
 
+      const data = await response.json();
       return data;
     } catch (error) {
       console.error("API request failed:", error);
