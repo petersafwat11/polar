@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./topMenu.module.css";
 import Image from "next/image";
 import { FaFacebookF } from "react-icons/fa";
@@ -11,25 +11,95 @@ import { FiPhone } from "react-icons/fi";
 import { MdOutlineStarPurple500 } from "react-icons/md";
 
 const TopMenu = () => {
+  const [socialLinks, setSocialLinks] = useState({
+    facebook: "",
+    twitter: "",
+    instagram: "",
+    linkedin: "",
+    youtube: "",
+    whatsapp: "",
+  });
+
+  useEffect(() => {
+    const fetchSocialLinks = async () => {
+      try {
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/api/social`,
+          {
+            method: "GET",
+            credentials: "include",
+          }
+        );
+        if (!response.ok) {
+          throw new Error("Failed to fetch social links");
+        }
+
+        const data = await response.json();
+        console.log("data", data);
+        // Assuming the first social media set in the response
+        if (data) {
+          console.log("data", data?.data?.data[0]);
+          setSocialLinks(data?.data?.data[0] || {});
+        }
+      } catch (error) {
+        console.error("Error fetching social links:", error);
+      }
+    };
+
+    fetchSocialLinks();
+  }, []);
+
+  const handleSocialClick = (url) => {
+    console.log("url", url);
+
+    if (url) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <div className={classes["container"]}>
       <div className={classes["social"]}>
-        <div className={classes["social-elem"]}>
+        <div
+          className={classes["social-elem"]}
+          onClick={() => handleSocialClick(socialLinks.facebook)}
+          style={{ cursor: "pointer" }}
+        >
           <FaFacebookF className={classes["social-icon"]} />
         </div>
-        <div className={classes["social-elem"]}>
+        <div
+          className={classes["social-elem"]}
+          onClick={() => handleSocialClick(socialLinks.twitter)}
+          style={{ cursor: "pointer" }}
+        >
           <FaXTwitter className={classes["social-icon"]} />
         </div>
-        <div className={classes["social-elem"]}>
+        <div
+          className={classes["social-elem"]}
+          onClick={() => handleSocialClick(socialLinks.instagram)}
+          style={{ cursor: "pointer" }}
+        >
           <FaInstagram className={classes["social-icon"]} />
         </div>
-        <div className={classes["social-elem"]}>
+        <div
+          className={classes["social-elem"]}
+          onClick={() => handleSocialClick(socialLinks.linkedin)}
+          style={{ cursor: "pointer" }}
+        >
           <FaLinkedinIn className={classes["social-icon"]} />
         </div>
-        <div className={classes["social-elem"]}>
+        <div
+          className={classes["social-elem"]}
+          onClick={() => handleSocialClick(socialLinks.youtube)}
+          style={{ cursor: "pointer" }}
+        >
           <TbBrandYoutube className={classes["social-icon"]} />
         </div>
-        <div className={classes["social-elem"]}>
+        <div
+          className={classes["social-elem"]}
+          onClick={() => handleSocialClick(socialLinks.whatsapp)}
+          style={{ cursor: "pointer" }}
+        >
           <FaWhatsapp className={classes["social-icon"]} />
         </div>
       </div>
