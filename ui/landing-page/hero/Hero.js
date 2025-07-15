@@ -2,21 +2,37 @@ import React from "react";
 import classes from "./hero.module.css";
 import Image from "next/image";
 import Button from "@/ui/common/button/Button";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+  const router = useRouter();
   return (
     <div className={classes.heroBg}>
       <div className={classes.container}>
         <div className={classes.content}>
-          <p className={classes.subheading}>Welcome To Polar Trading Services</p>
+          <p className={classes.subheading}>
+            Welcome To Polar Trading Services
+          </p>
           <h1 className={classes.heading}>
             Transform Your Life Through Expert{" "}
             <span className={classes.highlight}>Forex Trading</span> Education
           </h1>
-          <Button>Join Membership</Button>
+          <Button
+            onClick={() => {
+              router.push("/forex");
+            }}
+          >
+            Join Membership
+          </Button>
         </div>
 
-        <div className={classes.imageContainer}>
+        <div
+          onClick={() => {
+            router.push("/forex");
+            console.log("clicked");
+          }}
+          className={classes.imageContainer}
+        >
           <picture>
             <source media="(max-width: 850px)" srcSet="/heromobile.png" />
             <img

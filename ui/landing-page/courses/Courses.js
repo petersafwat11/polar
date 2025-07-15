@@ -5,7 +5,7 @@ import classes from "./courses.module.css";
 const Courses = ({
   courseList = [],
   cardsPerView: initialCardsPerView = 4,
-  sectionTitle = "Our Latest Courses"
+  sectionTitle = "Our Latest Courses",
 }) => {
   const [current, setCurrent] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(initialCardsPerView);
@@ -23,7 +23,7 @@ const Courses = ({
       }
     };
 
-    handleMediaChange(mediaQuery); 
+    handleMediaChange(mediaQuery);
     mediaQuery.addEventListener("change", handleMediaChange);
 
     return () => mediaQuery.removeEventListener("change", handleMediaChange);
@@ -34,51 +34,65 @@ const Courses = ({
   const visibleCards = courseList.slice(startIdx, startIdx + cardsPerView);
 
   const goLeft = () => setCurrent((prev) => Math.max(0, prev - 1));
-  const goRight = () => setCurrent((prev) => Math.min(DOTS_COUNT - 1, prev + 1));
+  const goRight = () =>
+    setCurrent((prev) => Math.min(DOTS_COUNT - 1, prev + 1));
   const goTo = (idx) => setCurrent(idx);
 
-  return (<>
-       <div className={classes.headingRow}>
-          <h2 className={classes.heading}>{sectionTitle}</h2>
-          <div className={classes.arrowsContainer}>
-            <button className={classes.arrowBtn} onClick={goLeft} disabled={current === 0}>
-              <img src="/svg/leftarrow.svg" alt="Left Arrow" />
-            </button>
-            <button className={classes.arrowBtn} onClick={goRight} disabled={current === DOTS_COUNT - 1}>
-              <img src="/svg/righarrow.svg" alt="Right Arrow" />
-            </button>
-          </div>
-        </div>
-    <div className={classes.coursesSection}>
-      <div className={classes.container}>
-      
-
-        <div className={classes.coursesGrid}>
-          {visibleCards.map((course, idx) => (
-            <div className={classes.card} key={startIdx + idx}>
-              <div className={classes.imageWrapper}>
-                <img src={course.image} alt={course.title} className={classes.image} />
-              </div>
-              <div className={classes.cardContent}>
-                <h3 className={classes.title}>{course.title}</h3>
-                <p className={classes.desc}>{course.desc}</p>
-                <button className={classes.viewMore}>View More</button>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className={classes.dotsContainer}>
-          {[...Array(DOTS_COUNT)].map((_, idx) => (
-            <button
-              key={idx}
-              className={`${classes.dot} ${current === idx ? classes.activeDot : ""}`}
-              onClick={() => goTo(idx)}
-            />
-          ))}
+  return (
+    <>
+      <div className={classes.headingRow}>
+        <h2 className={classes.heading}>{sectionTitle}</h2>
+        <div className={classes.arrowsContainer}>
+          <button
+            className={classes.arrowBtn}
+            onClick={goLeft}
+            disabled={current === 0}
+          >
+            <img src="/svg/leftarrow.svg" alt="Left Arrow" />
+          </button>
+          <button
+            className={classes.arrowBtn}
+            onClick={goRight}
+            disabled={current === DOTS_COUNT - 1}
+          >
+            <img src="/svg/righarrow.svg" alt="Right Arrow" />
+          </button>
         </div>
       </div>
-    </div>
+      <div className={classes.coursesSection}>
+        <div className={classes.container}>
+          <div className={classes.coursesGrid}>
+            {visibleCards.map((course, idx) => (
+              <div className={classes.card} key={startIdx + idx}>
+                <div className={classes.imageWrapper}>
+                  <img
+                    src={course.image}
+                    alt={course.title}
+                    className={classes.image}
+                  />
+                </div>
+                <div className={classes.cardContent}>
+                  <h3 className={classes.title}>{course.title}</h3>
+                  <p className={classes.desc}>{course.desc}</p>
+                  <button className={classes.viewMore}>View More</button>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className={classes.dotsContainer}>
+            {[...Array(DOTS_COUNT)].map((_, idx) => (
+              <button
+                key={idx}
+                className={`${classes.dot} ${
+                  current === idx ? classes.activeDot : ""
+                }`}
+                onClick={() => goTo(idx)}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
     </>
   );
 };

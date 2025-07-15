@@ -1,40 +1,40 @@
 .container {
   display: flex;
-justify-content: flex-start;
+  justify-content: flex-start;
   align-items: center;
   padding: 80px 120px;
- max-height: 590px;
+  max-height: 590px;
   position: relative;
   z-index: 1;
   width: 100%;
   margin: 0 auto;
-    overflow: hidden;
+  overflow: hidden;
 }
 .content {
-max-width:610px;
-width: 100%;
+  max-width: 610px;
+  width: 100%;
   z-index: 1;
 }
 
 .subheading {
-color: var(--primary);
-font-family: Lato;
-font-size: 20px;
-font-weight: 400;
-line-height: 30px; 
-margin-bottom: 24px;
+  color: var(--primary);
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 24px;
 }
 
 .heading {
-color: #FFF;
-font-family: "Nunito Sans" !important;
-font-size: 70px;
-font-weight: 600;
-line-height: 82px; 
-text-transform: capitalize;
-margin-bottom: 48px;
-margin-right: 0;
-padding: 0;
+  color: #fff;
+  font-family: "Nunito Sans" !important;
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 82px;
+  text-transform: capitalize;
+  margin-bottom: 48px;
+  margin-right: 0;
+  padding: 0;
 }
 
 .highlight {
@@ -42,17 +42,15 @@ padding: 0;
 }
 
 .button {
- 
-
   padding: 14px 30px;
   border-radius: 25px;
   cursor: pointer;
-font-size: 18px;
-font-weight: 400;
-line-height: 28px; 
-width: 196px !important;
-height:56px !important;
-margin-top:0px !important; 
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  width: 196px !important;
+  height: 56px !important;
+  margin-top: 0px !important;
 }
 
 .button:hover {
@@ -62,16 +60,16 @@ margin-top:0px !important;
 
 .imageContainer {
   display: flex;
-max-width: 665px;
-width: 100%;
+  max-width: 665px;
+  width: 100%;
   z-index: 1;
   position: relative;
 }
 
 .image {
-max-width:665px;
-width: 100%;
-  height:486px;
+  max-width: 665px;
+  width: 100%;
+  height: 486px;
 }
 
 .viewCoursesBtn {
@@ -100,7 +98,7 @@ width: 100%;
 }
 
 .heroBg {
-  background: #0B1113 url('/herobackground.svg') center/cover no-repeat;
+  background: #0b1113 url("/herobackground.svg") center/cover no-repeat;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -165,7 +163,6 @@ width: 100%;
     max-width: 100%;
     display: flex;
     flex-direction: column;
-   
   }
 
   .heading {
@@ -173,19 +170,18 @@ width: 100%;
     padding: 0 35px;
     margin-bottom: 12px;
     font-size: 32px;
-    line-height: 42px;  }
+    line-height: 42px;
+  }
 
   .subheading {
     order: 2;
-    color: #01BCE4;
-text-align: center;
-font-size: 14px;
+    color: #01bce4;
+    text-align: center;
+    font-size: 14px;
 
-font-weight: 400;
-line-height: 30px; /* 214.286% */
-margin-bottom: 12px;
-
-  
+    font-weight: 400;
+    line-height: 30px; /* 214.286% */
+    margin-bottom: 12px;
   }
 
   .content button {
@@ -201,10 +197,8 @@ margin-bottom: 12px;
     justify-content: center;
     align-items: center;
     margin-top: 12px;
- 
   }
   .image {
-
     width: 370px;
     height: 270;
     display: block;
@@ -212,9 +206,9 @@ margin-bottom: 12px;
   }
 
   .viewCoursesBtn {
-  width: 80px;
-height: 80px;
-flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
     position: absolute;
     top: 50%;
     left: 50%;

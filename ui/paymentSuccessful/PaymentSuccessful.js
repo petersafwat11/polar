@@ -16,18 +16,19 @@ const PaymentSuccessful = ({ onDone }) => {
       <p className={classes["amount"]}>$50.50</p>
       <p className={classes["success-message"]}>Payment Successful!</p>
       <p className={`${lato.className} ${classes["message"]}`}>
-        Your payment was successfully sent to [Bank Name] - [Account Number].
+        Your payment was successfully made. Check your Inbox for the Login
+        details & Course content!
       </p>
       <p className={`${lato.className} ${classes["time"]}`}>
         2024-12-06, 11:30 AM
       </p>
       <div className={classes["buttons"]}>
-        <Button className={classes["history"]}>View Transaction History</Button>
+        <Button className={classes["history"]}>Login/Members</Button>
         <button
           className={`${lato.className} ${classes["done"]}`}
           onClick={onDone}
         >
-          Done
+          Close
         </button>
       </div>
     </div>

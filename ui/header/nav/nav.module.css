@@ -5,6 +5,9 @@
     background-color: transparent;
     z-index: 100;
 }
+.logo{
+  cursor: pointer;
+}
 /* FOR DIFFRENT BACKGROUNDS */
 .default,
 .checkout,

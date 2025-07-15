@@ -1,34 +1,33 @@
-'use client';
+"use client";
 import React, { useState } from "react";
 import classes from "./nav.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import Button from "@/ui/common/button/Button";
 import { FiPhone } from "react-icons/fi";
+import { useRouter } from "next/navigation";
 
 export default function Navbar({ variant = "default" }) {
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const containerClass = `${classes.container} ${classes[variant] || ""}`;
 
   return (
     <>
-    {variant === "contact" && (
-  <div className={classes.contactBackground} />
-)}
+      {variant === "contact" && <div className={classes.contactBackground} />}
 
-{variant === "checkout" && (
-  <div className={classes.checkoutBackground} />
-)}
+      {variant === "checkout" && <div className={classes.checkoutBackground} />}
 
-<div className={`
+      <div
+        className={`
   ${variant === "forex" ? classes.forexNavWrapper : ""}
   ${variant === "contact" ? classes.contactNavWrapper : ""}
   ${variant === "checkout" ? classes.checkoutNavWrapper : ""}
   ${variant === "login" ? classes.loginNavWrapper : ""}
   ${variant === "forgetpass" ? classes.forgetpassNavWrapper : ""}
   ${variant === "signup" ? classes.signupNavWrapper : ""}
-`}>
-
+`}
+      >
         <div className={containerClass}>
           <Image
             className={classes.logo}
@@ -36,17 +35,35 @@ export default function Navbar({ variant = "default" }) {
             height={60}
             src="/svg/logo.svg"
             alt="logo"
+            onClick={() => router.push("/")}
           />
           <nav className={classes.nav}>
-            <Link href="/forex" className={classes.option}>FOREX</Link>
-            <Link href="/crypto" className={classes.option}>CRYPTO</Link>
-            <Link href="/" className={classes.option}>INDICIES/FUTURES</Link>
-            <Link href="/" className={classes.option}>BOTS</Link>
-            <Link href="/" className={classes.option}>SOFTWARE</Link>
-            <Link href="/contact-us" className={classes.option}>CONTACT US</Link>
+              <Link href="/courses?category=forex" className={classes.option}>
+              FOREX
+            </Link>
+            <Link href="/courses?category=crypto" className={classes.option}>
+              CRYPTO
+            </Link>
+            <Link
+              href="/courses?category=indices/futures"
+              className={classes.option}
+            >
+              INDICIES/FUTURES
+            </Link>
+            <Link href="/courses?category=bots" className={classes.option}>
+              BOTS
+            </Link>
+            <Link href="/courses?category=software" className={classes.option}>
+              SOFTWARE
+            </Link>
+            <Link href="/contact-us" className={classes.option}>
+              CONTACT US
+            </Link>
           </nav>
           <Link href="/login" passHref legacyBehavior>
-            <a><Button className={classes.desktopBtn}>Login/Members</Button></a>
+            <a>
+              <Button className={classes.desktopBtn}>Login/Members</Button>
+            </a>
           </Link>
           <div className={classes.responsiveRight}>
             <span className={classes.phone}>
@@ -76,18 +93,63 @@ export default function Navbar({ variant = "default" }) {
               aria-label="Close menu"
               onClick={() => setMenuOpen(false)}
             >
-              <img src="/svg/close.svg" alt="Close menu" width={24} height={24} />
+              <img
+                src="/svg/close.svg"
+                alt="Close menu"
+                width={24}
+                height={24}
+              />
             </button>
             <nav className={classes.mobileNav}>
-              <Link href="/forex" className={classes.option} onClick={() => setMenuOpen(false)}>FOREX</Link>
-              <Link href="/crypto" className={classes.option} onClick={() => setMenuOpen(false)}>CRYPTO</Link>
-              <Link href="/" className={classes.option} onClick={() => setMenuOpen(false)}>INDICIES/FUTURES</Link>
-              <Link href="/" className={classes.option} onClick={() => setMenuOpen(false)}>BOTS</Link>
-              <Link href="/" className={classes.option} onClick={() => setMenuOpen(false)}>SOFTWARE</Link>
-              <Link href="/contact-us" className={classes.option} onClick={() => setMenuOpen(false)}>CONTACT US</Link>
+              <Link
+                href="/courses?category=forex"
+                className={classes.option}
+                onClick={() => setMenuOpen(false)}
+              >
+                FOREX
+              </Link>
+              <Link
+                href="/courses?category=crypto"
+                className={classes.option}
+                onClick={() => setMenuOpen(false)}
+              >
+                CRYPTO
+              </Link>
+              <Link
+                href="/courses?category=indices/futures"
+                className={classes.option}
+                onClick={() => setMenuOpen(false)}
+              >
+                INDICIES/FUTURES
+              </Link>
+              <Link
+                href="/courses?category=bots"
+                className={classes.option}
+                onClick={() => setMenuOpen(false)}
+              >
+                BOTS
+              </Link>
+              <Link
+                href="/courses?category=software"
+                className={classes.option}
+                onClick={() => setMenuOpen(false)}
+              >
+                SOFTWARE
+              </Link>
+              <Link
+                href="/contact-us"
+                className={classes.option}
+                onClick={() => setMenuOpen(false)}
+              >
+                CONTACT US
+              </Link>
             </nav>
             <Link href="/login" passHref legacyBehavior>
-              <a><Button className={classes.mobileLoginBtn}>Login/Members</Button></a>
+              <a>
+                <Button className={classes.mobileLoginBtn}>
+                  Login/Members
+                </Button>
+              </a>
             </Link>
           </div>
         </>

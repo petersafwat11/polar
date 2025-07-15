@@ -1,9 +1,9 @@
-import Checkout from "@/ui/checkout/Checkout";
+import ForexCourseDetail from "@/ui/forex/ForexCourseDetail";
 import CoursesAPI from "@/utils/courses";
 
-const CheckoutPage = async ({ searchParams }) => {
-  const params = await searchParams;
-  const id = params?.id;
+export default async function CourseDetailPage({ params }) {
+  const { id } = await params;
+
   // Fetch course data from backend
   let courseData = null;
   try {
@@ -13,7 +13,5 @@ const CheckoutPage = async ({ searchParams }) => {
     console.error("Error fetching course:", error);
   }
 
-  return <Checkout courseData={courseData} />;
+  return <ForexCourseDetail courseData={courseData} courseId={id} />;
 }
-
-export default CheckoutPage;

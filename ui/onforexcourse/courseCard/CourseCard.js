@@ -1,40 +1,45 @@
 "use client";
 import styles from "./courseCard.module.css";
 import Button from "../../common/button/Button";
-;
-
+import { useRouter } from "next/navigation";
 export default function CourseCard({
-  image,
-  tags = [],
-  title,
-  badge,
+  data,
   onViewMore,
-  onQuickBuy,
+  // onQuickBuy,
   className,
   imageWrapperClass,
   titleClass,
-  content,
-  contentClass,
   buttonsRowClass,
   viewMoreBtnClass,
   quickBuyBtnClass,
 }) {
+  const router = useRouter();
   return (
     <div className={className || styles.card}>
-      {badge && <div className={styles.badge}>{badge}</div>}
       <div className={imageWrapperClass || styles.imageWrapper}>
-        <img src={image} alt={title} className={styles.image} />
+        <img
+          src={data?.image || "/forexcourse.png"}
+          alt={data?.title || "Course"}
+          className={styles.image}
+        />
       </div>
       <div className={styles.tagsRow}>
-        {tags.map((tag, idx) => (
-          <span className={styles.tag} key={idx}>{tag}</span>
-        ))}
+        <span className={styles.tag}>{data?.level}</span>
       </div>
-      <div className={titleClass || styles.title}>{title}</div>
-      {content && <div className={contentClass}>{content}</div>}
+      <div className={titleClass || styles.title}>{data?.title}</div>
       <div className={buttonsRowClass || styles.buttonsRow}>
-        <Button className={viewMoreBtnClass || styles.viewMoreBtn} onClick={onViewMore}>View More</Button>
-        <button className={quickBuyBtnClass || styles.quickBuyBtn} onClick={onQuickBuy}>Quick Buy</button>
+        <Button
+          className={viewMoreBtnClass || styles.viewMoreBtn}
+          onClick={onViewMore}
+        >
+          View More
+        </Button>
+        <button
+          className={quickBuyBtnClass || styles.quickBuyBtn}
+          onClick={() => router.push(`/checkout?id=${data._id}`)}
+        >
+          Quick Buy
+        </button>
       </div>
     </div>
   );

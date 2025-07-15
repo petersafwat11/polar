@@ -11,8 +11,8 @@ import OnForexCourseSection from "../onforexcourse/OnForexCourseSection";
 import Work from "../landing-page/worktogather/Work";
 import TopBar from "../landing-page/courses/TopBar";
 import Courses from "../landing-page/courses/Courses";
-   import ChooseCourse from "../landing-page/chooseCourse/ChooseCourse";
-export default function Home() {
+import ChooseCourse from "../landing-page/chooseCourse/ChooseCourse";
+export default function Home({ courses }) {
   const [courseList, setCourseList] = useState([]);
   useEffect(() => {
     fetch("/dummy/coursesData.json")
@@ -23,12 +23,12 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <span className={styles["blue-ellipse-3"]}></span>
-   
+
       <span className={styles["blue-ellipse-2"]}></span>
 
-           <span className={styles["blue-ellipse-1"]}></span>
+      <span className={styles["blue-ellipse-1"]}></span>
       <span className={styles["blue-ellipse-footer"]}></span>
-      <Hero/>
+      <Hero />
       <Stats />
       <Welcome />
       <Process />
@@ -39,9 +39,9 @@ export default function Home() {
         sectionTitle="Our Latest Courses"
       />
       <ChooseCourse />
-      <OnForexCourseSection />
+      <OnForexCourseSection courseList={courses} />
       <Work />
       <BlogSection />
     </div>
   );
-} 
+}

@@ -17,9 +17,28 @@ function useIsMobile() {
   return isMobile;
 }
 
-export default function Checkout() {
+export default function Checkout({ courseData }) {
   const [showSuccess, setShowSuccess] = useState(false);
   const isMobile = useIsMobile();
+  const renderStars = (rating) => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      stars.push(
+        <img
+          height={18}
+          key={i}
+          src={
+            i <= rating
+              ? "/svg/bluestar-single.svg"
+              : "/svg/whitestar-single.svg"
+          }
+          alt={i <= rating ? "Blue Star" : "White Star"}
+          className={styles.detailStarImg}
+        />
+      );
+    }
+    return stars;
+  };
 
   return (
     <>
@@ -44,7 +63,7 @@ export default function Checkout() {
 
         <div className={styles.checkoutCard}>
           <div className={styles.toprow}>
-            <img src="/svg/logo.svg" alt="Polar Logo" className={styles.logo} />
+            {/* <img src="/svg/logo.svg" alt="Polar Logo" className={styles.logo} /> */}
             <div className={styles.cartSteps}>
               <span className={styles.step}>
                 <img
@@ -93,17 +112,26 @@ export default function Checkout() {
 
                 <div className={styles.cartInfo}>
                   <div className={styles.cartTitle}>
-                    Forex Trading Advance Course (Level 1 + Level 2)
+                    {courseData?.title || "Course"}
                   </div>
 
                   <div className={styles.cartStars}>
-                    <img src="/svg/bluestar.svg" alt="Blue Star" height={18} />
-                    <span className={styles.cartReviews}>15+ Reviews</span>
+                  {renderStars(courseData?.reviews?.length || 0)}
+                  <span className={styles.cartReviews}>
+                      {courseData?.reviews?.length || 0} Reviews
+                    </span>
                   </div>
 
                   <div className={styles.cartPriceRow}>
-                    <span className={styles.cartPrice}>$50.50</span>
-                    <span className={styles.cartOldPrice}>$91.00</span>
+                    <span className={styles.cartPrice}>
+                      {courseData?.price -
+                        (courseData?.price * courseData?.discount) / 100}
+                    </span>
+                    {courseData?.discount && (
+                      <span className={styles.cartOldPrice}>
+                        {courseData?.price}
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>
@@ -117,14 +145,18 @@ export default function Checkout() {
 
               <div className={styles.paymentIcons}>
                 {[
+                  { svg: "googlePay", alt: "Google Pay" },
+                  { svg: "applePay", alt: "Apple Pay" },
                   { svg: "discover", alt: "Visa" },
                   { svg: "mastercard", alt: "Mastercard" },
                   { svg: "visa", alt: "Amex" },
-                  { svg: "american", alt: "Discover" },
+                  { svg: "amex", alt: "Discover" },
                   { svg: "diners", alt: "Apple Pay" },
                   { svg: "jcb", alt: "Crypto" },
                 ].map((item, index) => (
                   <img
+                    width={67}
+                    // height={40}
                     key={index}
                     src={`/svg/${item.svg}.svg`}
                     alt={item.alt}
