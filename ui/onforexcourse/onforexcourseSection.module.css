@@ -2,7 +2,7 @@
 
 .section {
   width: 100%;
-  padding: 100px 120px 0px 120px;
+  padding: 100px 8.2% 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,20 +10,19 @@
 }
 
 .textBlock {
-  color: rgba(255, 255, 255, 0.70) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
   font-family: Lato;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
   text-transform: capitalize;
-  max-width:874px;
-  width:100%;
+  max-width: 874px;
+  width: 100%;
 }
 
 .subheading {
   font-size: 20px;
-
 }
 
 .cardsRow {
@@ -54,7 +53,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, rgba(0, 212, 254, 0.02) 0%, rgba(64, 221, 218, 0.02) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 212, 254, 0.02) 0%,
+    rgba(64, 221, 218, 0.02) 100%
+  );
 }
 
 .arrow img {
@@ -80,11 +83,11 @@
 }
 
 .dot {
-  background: rgba(0, 212, 254, 0.10);
+  background: rgba(0, 212, 254, 0.1);
 }
 
 .activeDot {
-  background: #00D4FE;
+  background: #00d4fe;
 }
 
 .topRow {
@@ -107,7 +110,17 @@
   top: -80px;
   right: -120px;
   border-radius: 274.344px;
-  background: linear-gradient(90deg, #00D4FE 0%, #01D1FD 26%, #07C8FB 43%, #10B9F8 57%, #1DA5F4 70%, #2F8AEF 81%, #4469E8 92%, #574CE3 100%);
+  background: linear-gradient(
+    90deg,
+    #00d4fe 0%,
+    #01d1fd 26%,
+    #07c8fb 43%,
+    #10b9f8 57%,
+    #1da5f4 70%,
+    #2f8aef 81%,
+    #4469e8 92%,
+    #574ce3 100%
+  );
   filter: blur(201.924px);
   width: 274.344px;
   height: 274.344px;
@@ -123,7 +136,7 @@
 }
 
 .relatedCoursesHeading {
-  color: #FFF;
+  color: #fff;
   font-family: Sansation;
   font-size: 44px;
   font-weight: 700;
@@ -153,7 +166,6 @@
   }
 }
 
-
 @media (max-width: 1019px) {
   .topRow {
     flex-direction: column;
@@ -166,7 +178,6 @@
     display: none;
   }
 }
-
 
 @media (max-width: 850px) {
   .section {
@@ -188,11 +199,11 @@
 
   .textBlock,
   .subheading {
-color: rgba(255, 255, 255, 0.60);
-font-family: "Nunito Sans";
-font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "Nunito Sans";
+    font-size: 16px;
 
-line-height: 26px; 
+    line-height: 26px;
   }
 
   .topRow {
@@ -207,7 +218,6 @@ line-height: 26px;
   }
 }
 
-
 @media (max-width: 650px) {
   .section {
     padding: 0 18px;
@@ -219,13 +229,11 @@ line-height: 26px;
     align-items: center;
     justify-content: center;
     gap: 16px;
-  margin: 24px 0;
+    margin: 24px 0;
 
     padding: 0;
     padding: 0;
   }
-
- 
 
   .sliderContainer {
     flex-direction: column;

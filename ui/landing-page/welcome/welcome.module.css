@@ -1,40 +1,41 @@
 .container {
-display:flex;
-align-items: center;
-padding: 100px 120px;
-width: 100%;
-gap: 40px;;
-width:100%;
+  display: flex;
+  align-items: center;
+  padding: 100px 8vw;
+  width: 100%;
+  gap: 40px;
+  width: 100%;
 }
 .imageContainer {
-
-width:100%;
-    height: 514px;
+  /* width: 100%;
+  height: 514px; */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .image {
-  height: 514px;
-max-width:750px;
-width:100%;
+  /* height: 514px;
+  max-width: 750px; */
+  width: 100%;
+  max-width: 1000px;
 }
 
 .content {
-max-width: 618px;
-width:100%;
+  /* max-width: 618px;
+  width: 100%; */
+  flex: 1;
 }
 
-
 .academyTag {
-width: 267px;
+  width: 267px;
   margin-bottom: 16px;
   text-wrap: nowrap;
 }
 
 .heading {
-  color: #FFF;
+  color: #fff;
   font-family: Sansation !important;
   font-size: 44px;
   font-weight: 700;
@@ -44,7 +45,7 @@ width: 267px;
 }
 
 .text {
-  color: rgba(255, 255, 255, 0.60);
+  color: rgba(255, 255, 255, 0.6);
   font-family: "Nunito Sans";
   font-size: 20px;
   font-style: normal;
@@ -53,7 +54,6 @@ width: 267px;
   align-self: stretch;
   margin-bottom: 48px;
 }
-
 
 @media (min-width: 851px) and (max-width: 950px) {
   .container {
@@ -101,7 +101,6 @@ width: 267px;
   .buttonWrapper {
     justify-content: center;
   }
-
 }
 
 /* ========== Mobile & Tablet========== */
@@ -111,7 +110,7 @@ width: 267px;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding:  45px 18px 16px 18px;
+    padding: 45px 18px 16px 18px;
     gap: 0px;
   }
 
@@ -120,15 +119,14 @@ width: 267px;
     flex-direction: column;
     align-items: center;
     text-align: center;
-  
   }
 
   .imageContainer {
-  width: 100%;
+    width: 100%;
 
-height: 318.68px;
-flex-shrink: 0;
-    
+    height: 318.68px;
+    flex-shrink: 0;
+
     margin: 24px 0px;
     display: flex;
     justify-content: center;
@@ -136,10 +134,10 @@ flex-shrink: 0;
   }
 
   .image {
-  width: 100%;
-     max-width: 332.829px;
-height: 318.68px;
-    
+    width: 100%;
+    max-width: 332.829px;
+    height: 318.68px;
+
     object-fit: cover;
   }
 
@@ -149,19 +147,19 @@ height: 318.68px;
     align-items: center;
   }
   .text {
-color: rgba(255, 255, 255, 0.60);
-font-family: "Nunito Sans";
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; 
-text-align: left;/* 171.429% */
-  margin-bottom: 0px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "Nunito Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left; /* 171.429% */
+    margin-bottom: 0px;
   }
 
   .buttonWrapper {
     width: 100%;
-  
+
     margin-top: 24px;
     display: flex;
     justify-content: center;
@@ -169,7 +167,7 @@ text-align: left;/* 171.429% */
 
   .button {
     width: 100%;
-  margin-bottom: 0px;
+    margin-bottom: 0px;
   }
 
   .heading {

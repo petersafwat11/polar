@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 80px 120px;
+  padding: 80px 8%;
   max-height: 590px;
   position: relative;
   z-index: 1;
@@ -11,8 +11,9 @@
   overflow: hidden;
 }
 .content {
-  max-width: 610px;
-  width: 100%;
+  /* max-width: 610px;
+  width: 100%; */
+  flex: 1;
   z-index: 1;
 }
 
@@ -60,15 +61,17 @@
 
 .imageContainer {
   display: flex;
-  max-width: 665px;
-  width: 100%;
+  /* max-width: 665px;
+  width: 100%; */
   z-index: 1;
   position: relative;
+  flex: 1;
 }
 
 .image {
-  max-width: 665px;
-  width: 100%;
+  /* max-width: 665px;
+  width: 100%; */
+  /* flex: 1; */
   height: 486px;
 }
 
