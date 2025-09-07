@@ -32,12 +32,12 @@ const Footer = () => {
             <div className={classes.contactRow}>
               <FiMail className={classes.icon} size={20} />
               <span className={classes["option"]}>
-                tradewithabhinay@gmail.com
+              Polartradingservices@proton.me
               </span>
             </div>
             <div className={classes.contactRow}>
               <FiPhone className={classes.icon} size={20} />
-              <span className={classes["option"]}>+91 9041899129</span>
+              <span className={classes["option"]}>+447729213427</span>
             </div>
           </div>
         </div>

@@ -120,7 +120,7 @@ const TopMenu = () => {
           <div className={classes["phone-wrapper"]}>
             <FiPhone className={classes["phone-icon"]} />
           </div>
-          <p className={classes["num"]}> +44 (0)20 3435 4629</p>
+          <p className={classes["num"]}>+44 (0) 7729213427</p>
         </div>
       </div>
     </div>

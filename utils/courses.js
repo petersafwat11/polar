@@ -133,3 +133,4 @@ class CoursesAPI {
 }
 
 export default CoursesAPI;
+

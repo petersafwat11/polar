@@ -68,7 +68,7 @@ export default function Navbar({ variant = "default" }) {
           <div className={classes.responsiveRight}>
             <span className={classes.phone}>
               <FiPhone className={classes.phoneIcon} />
-              <span className={classes.phoneNum}>+44 (0)20 3435 4629</span>
+              <span className={classes.phoneNum}>+44 (0) 7729213427</span>
             </span>
             <button
               className={classes.menuBtn}
