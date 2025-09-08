@@ -25,14 +25,13 @@ const Footer = () => {
                 className={classes.icon}
               />
               <span className={classes["option"]}>
-                Shop No. 26, 1st Floor, PPR Mall, Mithapur Rd, Ravindra Nagar,
-                Phase 2, Urban Estate Phase II, Jalandhar, Punjab 144003
+                189 Wulfstan Street London, W120AB, United kingdom
               </span>
             </div>
             <div className={classes.contactRow}>
               <FiMail className={classes.icon} size={20} />
               <span className={classes["option"]}>
-              Polartradingservices@proton.me
+                Polartradingservices@proton.me
               </span>
             </div>
             <div className={classes.contactRow}>
@@ -67,7 +66,11 @@ const Footer = () => {
               "Privacy Policy",
               "Terms & Conditions",
             ].map((item, index) => (
-              <Link key={index} href="/" className={classes.footerOptionSecondary}>
+              <Link
+                key={index}
+                href="/"
+                className={classes.footerOptionSecondary}
+              >
                 {item}
               </Link>
             ))}
