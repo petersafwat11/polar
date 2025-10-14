@@ -1,0 +1,23 @@
+.page {
+  margin-bottom: 9.1rem;
+}
+.page-title {
+  color: #fff;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+.top {
+  padding: 10.5rem 0 15.6rem;
+  background: url("/svg/candle-background.svg");
+  margin-top: -1rem;
+}
+@media (max-width: 56.25rem) {
+  .top {
+    padding: 13.4rem 0 11.3rem;
+    margin-top: 0;
+    background: url("/svg/candle-mobile.svg") top center;
+  }
+}
