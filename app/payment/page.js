@@ -1,4 +1,3 @@
-import { manrope } from "../fonts";
 import React from "react";
 import classes from "./page.module.css";
 import axios from "axios";
@@ -18,7 +17,7 @@ const page = async ({ searchParams }) => {
 
   try {
     console.log("Creating payment link for insurance ID:", id);
-    
+
     const response = await axios.post(
       `${BACKEND_URL}/payment/create-payment-link`,
       {
@@ -27,21 +26,31 @@ const page = async ({ searchParams }) => {
     );
 
     const { hosted_checkout_url } = response?.data?.data?.fullResponse;
-    console.log("hosted_checkout_url", hosted_checkout_url, response?.data?.data);
-    
+    console.log(
+      "hosted_checkout_url",
+      hosted_checkout_url,
+      response?.data?.data
+    );
+
     // Immediate server-side redirect to SumUp payment page
     if (hosted_checkout_url) {
       redirect(hosted_checkout_url);
     }
   } catch (error) {
     // Check if this is a Next.js redirect error (which is expected)
-    if (error?.message === "NEXT_REDIRECT" || error?.digest?.startsWith("NEXT_REDIRECT")) {
+    if (
+      error?.message === "NEXT_REDIRECT" ||
+      error?.digest?.startsWith("NEXT_REDIRECT")
+    ) {
       // This is a legitimate redirect, re-throw it so Next.js can handle it
       throw error;
     }
-    
-    console.error("Payment link creation failed:", error.response?.data || error.message);
-    
+
+    console.error(
+      "Payment link creation failed:",
+      error.response?.data || error.message
+    );
+
     // Show error message to user
     return (
       <div className={classes["page"]}>
@@ -50,10 +59,18 @@ const page = async ({ searchParams }) => {
             Payment Error
           </h1>
           <p style={{ color: "red", marginTop: "20px", textAlign: "center" }}>
-            {error.response?.data?.message || "Failed to create payment link. Please try again."}
+            {error.response?.data?.message ||
+              "Failed to create payment link. Please try again."}
           </p>
           {error.response?.data?.detail && (
-            <p style={{ color: "#666", marginTop: "10px", textAlign: "center", fontSize: "14px" }}>
+            <p
+              style={{
+                color: "#666",
+                marginTop: "10px",
+                textAlign: "center",
+                fontSize: "14px",
+              }}
+            >
               {JSON.stringify(error.response.data.detail)}
             </p>
           )}
@@ -66,7 +83,7 @@ const page = async ({ searchParams }) => {
   return (
     <div className={classes["page"]}>
       <div className={classes["top"]}>
-        <h1 className={`${manrope.className} ${classes["page-title"]}`}>
+        <h1 className={` ${classes["page-title"]}`}>
           Redirecting to payment...
         </h1>
       </div>
