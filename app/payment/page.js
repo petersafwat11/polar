@@ -12,9 +12,7 @@ const page = async ({ searchParams }) => {
   }
 
   // Create payment and get redirect URL - server-side
-  const BACKEND_URL =
-    process.env.NEXT_PUBLIC_BACKEND_SERVER || "http://localhost:8000/api";
-
+  const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL;
   try {
     console.log("Creating payment link for insurance ID:", id);
 
@@ -55,7 +53,10 @@ const page = async ({ searchParams }) => {
     return (
       <div className={classes["page"]}>
         <div className={classes["top"]}>
-          <h1 className={`${manrope.className} ${classes["page-title"]}`}>
+          <h1
+            className={`
+             ${classes["page-title"]}`}
+          >
             Payment Error
           </h1>
           <p style={{ color: "red", marginTop: "20px", textAlign: "center" }}>
