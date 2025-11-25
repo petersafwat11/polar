@@ -23,16 +23,17 @@ const page = async ({ searchParams }) => {
       }
     );
 
-    const { hosted_checkout_url } = response?.data?.data?.fullResponse;
-    console.log(
-      "hosted_checkout_url",
-      hosted_checkout_url,
-      response?.data?.data
-    );
+    const paymentData = response?.data?.data;
+    // Works with both Stripe (checkoutUrl) and SumUp (hosted_checkout_url)
+    const checkoutUrl =
+      paymentData?.checkoutUrl || paymentData?.hosted_checkout_url;
 
-    // Immediate server-side redirect to SumUp payment page
-    if (hosted_checkout_url) {
-      redirect(hosted_checkout_url);
+    console.log("Payment provider:", paymentData?.provider);
+    console.log("Checkout URL:", checkoutUrl);
+
+    // Immediate server-side redirect to payment page (Stripe or SumUp)
+    if (checkoutUrl) {
+      redirect(checkoutUrl);
     }
   } catch (error) {
     // Check if this is a Next.js redirect error (which is expected)

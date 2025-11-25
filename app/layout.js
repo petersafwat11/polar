@@ -44,7 +44,9 @@ export default function RootLayout({ children }) {
           }}
         />
         <HeaderClient />
-        {children}
+        <div className="layout">
+          {children}
+        </div>
         <FooterWrapper />
       </body>
     </html>
