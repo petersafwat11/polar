@@ -2,37 +2,9 @@ import React from "react";
 import classes from "./page.module.css";
 import axios from "axios";
 import { redirect } from "next/navigation";
-import PaymentRedirect from "./PaymentRedirect";
 
 const page = async ({ searchParams }) => {
-  const { id, status } = await searchParams;
-
-  // Handle success/cancelled status from payment redirect
-  if (status === "success") {
-    return (
-      <div className={classes["page"]}>
-        <div className={classes["top"]}>
-          <h1 className={classes["page-title"]}>Payment Successful!</h1>
-          <p style={{ color: "green", marginTop: "20px", textAlign: "center" }}>
-            Your payment has been processed successfully.
-          </p>
-        </div>
-      </div>
-    );
-  }
-
-  if (status === "cancelled") {
-    return (
-      <div className={classes["page"]}>
-        <div className={classes["top"]}>
-          <h1 className={classes["page-title"]}>Payment Cancelled</h1>
-          <p style={{ color: "#666", marginTop: "20px", textAlign: "center" }}>
-            Your payment was cancelled. You can try again if needed.
-          </p>
-        </div>
-      </div>
-    );
-  }
+  const { id } = await searchParams;
 
   // Validate id
   if (!id) {
@@ -59,9 +31,9 @@ const page = async ({ searchParams }) => {
     console.log("Payment provider:", paymentData?.provider);
     console.log("Checkout URL:", checkoutUrl);
 
-    // Use client-side redirect for external URLs (Stripe/SumUp)
+    // Immediate server-side redirect to payment page (Stripe or SumUp)
     if (checkoutUrl) {
-      return <PaymentRedirect url={checkoutUrl} />;
+      redirect(checkoutUrl);
     }
   } catch (error) {
     // Check if this is a Next.js redirect error (which is expected)
